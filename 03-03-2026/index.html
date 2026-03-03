@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+   #box1{
+    box-sizing: border-box;
+        background-color: red;
+       min-width:100px;
+       min-height:40px;        
+      border: 2px solid black;
+      padding: 2px;
+
+    }
+       #box2{
+        box-sizing: content-box;
+        background-color: yellow;
+        min-width:100px;
+       min-height:40px ;
+       border: 2px solid black;
+       padding: 2px;
+       
+    }
+  .contain{
+    color:yellow;
+    background-color: red;
+    display: flex; 
+     /* flex-direction: colown; */
+    justify-content: flex-start;
+    justify-content: flex-end;
+    justify-content: center;
+    justify-content: space-between;
+ justify-content: space-around;
+ justify-content: space-evenly; 
+  }
+
+  .const{
+    display: flex;
+    /* flex-direction:column-reverse; */
+        /* flex-direction:column; */
+        /* row and row reverse  */
+  }
+</style>
+</head>
+<body>
+    <h1 id="box1">border-box</h1>
+    <h1 id="box2">content-box </h1>
+
+     <p style="background-color: aqua; border: 2px solid black; width: 50%;  text-align: left;">one</p>
+      <p style="background-color: blue;width: 50%; height: 50px; margin: 20px;"> two</p>
+
+      <h5 style="background-color: violet;">my name</h5>
+      <div class="contain">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+         <div>4</div>
+        <div>5</div>
+      </div>
+   
+      <div class="const">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+         <div>4</div>
+        <div>5</div>
+      </div>
+      <form method="GET">
+        <label>email</label>
+        <input type="email" name="username" required><br><br>
+        <label>Age:</label>
+        <input type="number" name="age"><br><br>
+        <label>city</label>
+        <input type="text" name="city"><br><br>
+        <input type="submit" value="submit">
+
+      </form>
+</body>
+</html>
