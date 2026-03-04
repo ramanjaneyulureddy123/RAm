@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        width: 80%;
+        margin:auto;
+        /* border: 2px solid black   */
+    }
+    .logo{
+        background-color: lightgrey;
+        padding:20px;
+        margin-bottom:10px;
+    }
+    .nav{
+        background-color: lightgray;
+        padding:10px;
+        /* justify-content: center; */
+        text-align: center;
+        margin-bottom:10px;
+    }
+    .header{
+        /* width: 80%; */
+        background-color: lightgrey;
+        padding: 40px;
+        /* margin: auto; */
+        text-align: center;
+      margin-bottom:10px ;
+     }
+      .main{
+        display: flex;
+        /* flex-direction: row; */
+        /* width: 80%; */
+        margin: auto;
+        text-align: center;
+        gap: 10px;
+        margin-bottom: 10px;
+      } 
+      .sidebar{
+        width: 25%;
+        background-color: lightgrey;
+        padding: 80px;  
+      }    
+       .body{
+        width: 85%;
+        background-color:lightgrey;
+        padding: 80px;  
+      }  
+      .footer{
+        background-color:lightgrey;
+        padding: 20px;
+        text-align: center;
+         /* margin: auto; */
+        
+         /* margin-bottom: 10px; */
+         }
+
+         #a{
+            display: flex;
+            /* justify-content:center; */
+                justify-content:space-between;
+
+            background-color: antiquewhite;
+            /* align-items: center; */
+         }
+         
+         #b{
+             display: flex;
+            height: 100px;
+            /* justify-content:center; */
+            align-items:flex-end;
+            /* flex-direction: column-reverse; */
+            /* flex-start, center,stretch */
+            border: 2px solid black;
+         }
+</style>
+<body>
+    <div class="container">
+        <div class="logo">logo</div>
+        <div class="nav">nav</div>
+        <div class="header">header/banner</div>
+   
+    <div class="main">
+        <div class="sidebar">sidebar</div>
+        <div class="body">body </div>
+    </div>
+    <div class="footer">footer</div>
+    </div>
+
+    <div id="b">
+        <button>one</button>
+                <button>two</button>
+        <button>three</button>
+
+    </div>
+     <div id="a">
+        <button>one</button>
+                <button>two</button>
+        <button>three</button>
+    </div>
+    <script>
+  const obj={
+    name:"anji", age:22,city:"kadapa"
+  }
+  console.log(obj["name"])
+
+//   let arr=[1,2,3,4,2,7]
+// console.log(arr[2])
+// console.log(arr.indexOf(0))
+// console.log(arr.includes(10))
+const arr="anji in the world in"
+console.log(arr.lastIndexOf("i"))
+</script>
+</body>
+</html>
