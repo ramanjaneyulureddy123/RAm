@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Design Example</title>
+<style>
+  /* Base style (mobile first) */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: lightblue;
+    font-size: 16px;
+  }
+
+  header {
+    text-align: center;
+    padding: 20px;
+    background-color: navy;
+    color: white;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: navy;
+    padding: 10px;
+    background-color: white;
+    text-align: center;
+    border-radius: 5px;
+  }
+
+  main {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+  }
+
+  /* Tablet */
+  @media screen and (min-width: 600px) {
+    body {
+      font-size: 18px;
+      background-color: lightgreen;
+    }
+
+    nav {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+
+  /* Desktop */
+  @media screen and (min-width: 1024px) {
+    body {
+      font-size: 20px;
+      background-color: lightyellow;
+    }
+
+    main {
+      width: 60%;
+      margin: 0 auto;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Responsive Design Example</h1>
+</header>
+
+<nav>
+  <a href="#">Home</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Contact</a>
+</nav>
+
+<main>
+  <h2>Welcome!</h2>
+  <p>This page adjusts automatically for mobile, tablet, and desktop screens.</p>
+</main>
+
+</body>
+</html>
