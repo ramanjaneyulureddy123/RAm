@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+            display:flex;
+            /* justify-content: center; */
+             /* transform: rotate(45deg);
+            transform-origin: 20px 30px; */
+        }
+        .box:hover{
+             /* transform: rotate(45deg);
+            transform-origin: 20px 30px;
+            transform: translateX(50px);
+            transform: translateY(50px);
+            transform: scaleX(2);
+            transform: scaleY(2); */
+                        /* transform: rotateY(60deg);
+                        transform: rotateY(60deg); */
+
+transform:matrix(3,0,0,3,50,30)
+
+            /* transform: rotate(45deg);
+            transform-origin: top right; */
+            /* transform: translate(50px, 20px); */
+            /* transform: scale(4.5); */
+            /* transform:skew(20deg) scale(2.5) */
+        }
+        body{
+             display:flex;
+            justify-content: center;
+            height: 100vh;
+            align-items: center;
+        }
+        .main{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+            transform:matrix(3,0,0,3,50,30)
+        }
+    </style>
+</head>
+<body>
+    <div class="box">hi</div>
+
+        <div class="main">hi</div>
+        
+<script>
+let array=[9,8,7,6,5,4,3,3]
+array.sort((a,b)=>a-b)
+console.log(array)
+
+function sorting(array){
+    return array.sort((a,b)=>a-b)
+}
+console.log(sorting([6,5,4,3,2,1]))
+
+let num=[5,50,100,35]
+for(let i = 0; i<num.length; i++){
+    for( let j = i + 1; j<num.length; j++){
+        if(num[i]>num[j]){
+            let temp = num[i];
+            num[i] = num[j];
+            num[j] = temp;
+
+        }
+    }
+}
+console.log(num)
+</script>
+
+
+</body>
+</html>
