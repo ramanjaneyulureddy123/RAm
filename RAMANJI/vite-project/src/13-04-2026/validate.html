@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit=" return validateform()">
+        <label>Name</label>
+        <input type="text" id="name"><br><br>
+         <label>email</label>
+        <input type="email" id="email"><br><br>
+         <label>Password</label>
+        <input type="password" id="pass" pattern="(?=.*[A-Z])(?=.*[0-9]).{8,}" title="min 8 character, 1 uppercase,1 number" required><br><br>
+        
+        
+  <p id="error" style="color:red;"></p>
+
+
+        <button type="submit">submit</button>
+
+    </form>
+    <script>
+        window.onload = function(){
+  document.getElementById("name").value = localStorage.getItem("name") || "";
+  document.getElementById("email").value = localStorage.getItem("email") || "";
+  document.getElementById("pass").value = localStorage.getItem("password") || "";
+};
+        function validateform(){
+            
+
+
+            let name=document.getElementById("name").value;
+        let email=document.getElementById("email").value;
+        let password=document.getElementById("pass").value;
+        let pattern = /^(?=.*[A-Z])(?=.*[0-9]).{8,}$/;
+
+        if(name===""){
+            document.getElementById("error").innerText="name is required";
+            return false;
+        }
+        if(!email.includes("@")){
+            document.getElementById("error").innerText="enter valid email";
+            return false;
+        }
+        if(!pattern.test(password)){
+            document.getElementById("error").innerText="enter valid passeord";
+            return false;
+        }
+        localStorage.setItem("name", name);
+  localStorage.setItem("email", email);
+  localStorage.setItem("password", password);
+
+  
+        return true
+        }
+    </script>
+</body>
+</html>
