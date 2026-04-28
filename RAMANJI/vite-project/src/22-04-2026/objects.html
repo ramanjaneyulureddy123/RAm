@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let object={name:"anji", age:22,sal:20000,address:{city:"kadapa",phone:1234},greet:function(){
+            console.log("Hello"+this.name)
+        }}
+        console.log(object.address.phone)
+        object.greet()
+        console.log(object)
+        console.log(object["age"])
+        object.age=26
+        console.log(object)
+        object.role="software"
+        console.log(object);
+        object.name="mike"
+        console.log(object)
+        delete object.role
+        console.log(object)
+        let student = {
+  name: "Ravi",
+  marks: 85
+};
+console.log(student.name)
+student.Grade="A"
+console.log(student)
+student.marks="90"
+console.log(student)
+
+let multiple=[
+    {name:"vijjulu",lead:"cm"},
+    {name:"max",marks:60},
+        {name:"max",marks:60}
+
+]
+let gone=multiple.map(s=>s.marks)
+console.log(gone)
+console.log(multiple[0].name)
+console.log(multiple[1].marks)
+// maps---------------------------------
+ let number=[1,2,3,4,5]
+ let results=number.map(function(n){
+    return n*2
+ })
+ console.log(results)
+
+ let res=number.map(n=>n*2)
+ console.log(res)
+
+ let names=["ravi","ramu"]
+ let comes=names.map(s=>s.toUpperCase())
+ console.log(comes)
+let price=[100,200,300,400]
+let discount=price.map(p=>p+(p*0.18))
+console.log(discount)
+// filter---------------------------------------
+let num=[10,20,30,40]
+let e=num.filter(s=>s>20)
+console.log(e)
+
+let prices = [100, 500, 200, 1000];
+let expensive=prices.filter(s=> s>300)
+console.log(expensive);
+// reduce----------------------------
+let cost=[200,200,200]
+let pric=cost.reduce((acc,n)=>acc+n,1)
+console.log(pric)
+
+let students = [
+  { name: "Ravi", marks: 80 },
+  { name: "John", marks: 100 }
+];
+let total=students.reduce((acc,n)=> acc * n.marks,1)
+console.log(total)
+    </script>
+</body>
+</html

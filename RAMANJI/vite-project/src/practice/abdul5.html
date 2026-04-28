@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: grey;
+            padding: 20px;
+            margin: 0;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .whole{
+            
+display: flex;
+justify-content: center; 
+gap: 30px;
+        }
+        .card{
+            background-color: white;
+            padding:25px;
+            width:250px ;
+            border-radius:12px ;
+            transition: 0.3s;
+            box-shadow: 0 4px 10px pink;
+            text-align: center;
+        }
+        .card:hover{
+ transform:scale(1.1);
+ box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        .card.standard {
+  border: 2px solid red;
+  transform: scale(1.05);
+}
+.card h2 {
+  margin-bottom: 10px;
+}
+ul {
+    list-style: none;
+}
+ul li {
+    padding: 5px 0;
+
+}
+button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: none;
+  background: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+@media (max-width:768px) {
+    .whole{
+        flex-direction: column;
+        /* grid-template-columns: 1fr; */
+        align-items: center;
+    }
+    
+}
+@media (min-width:768px) and (max-width:1000px){
+    body{
+        /* flex-direction: column; */
+        /* align-items: center; */
+        background-color: red;
+    }
+    
+}
+
+    </style>
+</head>
+<body>
+    <div class="whole">
+        <div class="card">
+<h2>Basic</h2>
+<p> 300 per/month</p>
+<ul>
+    <li>100 msg</li>
+    <li>inlimited calls</li>
+    <li>2 GB data</li>
+</ul>
+<button>subsribe</button>
+        </div>
+             <div class=" card standard">
+<h2>Basic</h2>
+<p> 500 per/month</p>
+<ul>
+    <li>100 msg</li>
+    <li>inlimited calls</li>
+    <li>2 GB data</li>
+</ul>
+<button>subsribe</button>
+
+        </div>
+             <div class="card">
+<h2>Basic</h2>
+<p> 700 per/month</p>
+<ul>
+    <li>100 msg</li>
+    <li>inlimited calls</li>
+    <li>2 GB data</li>
+</ul>
+<button>subsribe</button>
+
+        </div>
+    </div>
+</body>
+</html>

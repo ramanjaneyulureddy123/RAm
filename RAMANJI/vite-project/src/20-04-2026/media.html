@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel ="stylesheet" href="./d.css"> -->
+     <style>
+        .container{
+           
+            display: grid;
+           grid-template-columns:repeat(3, 1fr);
+            padding: 20px;
+            gap: 10px;
+        }
+        .box{
+            background-color: yellow;
+            padding: 20px;
+        }
+        @media(min-width:601px) and (max-width:900px){
+.container{
+    grid-template-columns: repeat(2,1fr);
+}
+        }
+        @media (max-width:600px){
+            .container{
+            grid-template-columns: 1fr;
+            }
+        }
+        .con{
+  width: 200px;
+  height: 100px;
+  border: 2px solid red;
+  overflow:auto;
+}
+     </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Box1</div>
+        <div class="box">Box2</div>
+        <div class="box">Box3</div>
+        <div class="box">Box3</div>
+        <div class="box">Box3</div>
+        <div class="box">Box3</div>
+    </div>
+    <div class="con">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit...
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+</div>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>max-height of element</title>
+    <style>
+        .GFG {
+            max-height: 100px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="GFG">
+        <h3>GeeksforGeeks</h3>
+        <p>
+              GeeksforGeeks is a computer science platform
+            where you can learn programming. It is a Computer
+            Science portal for geeks. It contains well written,
+            well thought and well explained computer science
+            and programming articles, quizzes etc.
+        </p>
+    </div>
+</body>
+
+</html>
