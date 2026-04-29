@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btnn">Hover me</button>
+
+<script>
+let btn = document.getElementById("btnn")
+
+btn.addEventListener("mouseover", () => {
+  btn.style.color = "yellow"
+   console.log("hover")
+})
+
+btn.addEventListener("mouseout", () => {
+  btn.style.color = "red"
+   console.log("hover")
+})
+
+function outer(){
+    const a1=1000
+    function inner(){
+        console.log(a1)
+    }
+    return inner 
+}
+
+let f=outer()
+f()
+f()
+f()
+
+function a(){
+    let x=10
+    return function b(){
+        console.log(x)
+    }
+}
+let g=a()
+g()
+g()
+
+// function outer(){
+//     let name="mike"
+//     function inner(){
+//         console.log(name)
+//     }
+//     return inner
+// }
+
+// outer()
+// outer()
+// scope 
+let name="vijay"
+function sayhello(){
+    // console.log(name)
+}
+sayhello()
+    // console.log("scope is here")
+        console.log(name)
+
+        // function scope 
+ let aa=2
+            let b=3
+        function calculate(){
+           
+            console.log(aa+b)
+        }
+        calculate()
+
+        function test(){
+  let names = "Vijayyyy"
+  console.log(names) // 
+}
+
+test()
+// console.log(names)
+
+// block 
+{
+    let abi=2
+   console.log(abi)
+
+}
+// console.log(abi)
+
+if(true){
+    var nam="vijjulu"
+    // console.log(name)
+}
+    console.log(nam)
+
+    let y=200
+    function show(){
+        console.log(y)
+    }
+show()
+console.log(y)
+</script>
+</body>
+</html>
