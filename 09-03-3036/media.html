@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* @media(max-width:604px){
+        h1{
+            background-color: aqua;
+            flex-direction: column;
+        }
+    } */
+
+     /* @media (orientation:portrait){
+        h1{
+            background-color: blanchedalmond;
+        }
+     }
+     @media (orientation:landscape){
+        h1{
+            background-color:lightgreen;
+        }
+     } */
+
+     /* .box{
+        width: 400px;
+        height: 200px;
+        background-color: aqua;
+        text-align: center; 
+        line-height: 200px;
+     } */
+     /* moblle view  */
+     /* @media(min-width:604px){
+        .box{
+            background-color:red;
+           width:100%;
+        } 
+    } */
+
+        /* tablet view   */
+     /* @media(min-width:604px) and (max-width:1024px) {
+        .box{
+            background-color:red;
+           width:100%;
+        }
+    } */
+
+
+/* desktop view  */
+     /* @media(max-width:1025px){
+        .box{
+            background-color:blue;
+           width:100%;
+        }
+    } */
+     /* ---
+     ------------------ */
+     body{
+        background-color: rgb(132, 247, 17);
+     }
+
+     @media (max-width:600px){
+        body{
+            background-color: lightblue;
+        }
+     }
+
+@media(min-width:600px) and (max-width:1024px){
+    body{
+        background-color: lightgreen;
+    }
+}
+ .container{
+    display: grid;
+    grid-template-columns: 5fr 5fr;
+    grid-template-areas: 
+    "header header"
+    "aside main"
+    "footer footer";
+    grid-gap:10px;
+        text-align: center;
+}
+.a,.d{
+    padding: 20px;
+    /* height: 50px; */
+}
+.b,.c{
+    padding: 60px;
+}
+div{
+    text-align: center;
+    color: red;
+    font-weight: bold;
+}
+.a{
+    grid-area: header;
+    background:red;
+    color: aqua;
+}
+.b{
+    grid-area: aside;
+    background-color: orange;
+}
+.c{
+    grid-area:main;
+    background-color: green;
+width: 70%;
+
+}
+.d{
+    grid-area:footer;
+    background-color: blue;
+}
+</style>
+<body>
+    <h1 class="box">hello</h1>
+    <p>the responsive design</p>
+<div>The responsive design</div>
+    <div class="container">
+  <div class="a">header</div>
+  <div class="b">aside</div>
+  <div class="c">main</div>
+  <div class="d">Footer</div>
+</div>
+</body>
+</html>
