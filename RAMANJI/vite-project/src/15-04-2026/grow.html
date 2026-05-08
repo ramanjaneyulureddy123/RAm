@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      display: flex;
+      justify-content: center;
+      align-items:center;
+    }
+.head{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr ;
+  grid-gap:3px;
+
+}
+.a,.b,.c,.d{
+ background-color: red;
+  border: 2px solid black;
+ 
+  padding: 20px;
+  color:white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+ .a{
+  grid-column:1/4;
+ }
+ .b{
+  grid-column:1/2;
+ }
+ .c{
+  grid-column:2/4;
+ }
+ .d{
+  grid-column:1/4;
+ }
+  </style>
+</head>
+<body>
+  <div class="head" style="background-color: aqua; width: 400px; height: 300px;" >
+    <div class="a">header</div>
+        <div class="b">aside</div>
+    <div class="c">main</div>
+    <div class="d">header</div>
+
+  </div>
+</body>
+</html>

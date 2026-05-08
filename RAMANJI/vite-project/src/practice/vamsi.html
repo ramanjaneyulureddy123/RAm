@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Table</title>
+
+<style>
+body {
+  font-family: Arial;
+  padding: 20px;
+}
+
+/* TABLE WRAPPER (for mobile scroll) */
+.table-container {
+  overflow-x: auto;
+}
+
+/* TABLE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+/* HEADER */
+th {
+  background: #333;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+}
+
+/* CELLS */
+td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+/* HOVER */
+tr:hover {
+  background: #f1f1f1;
+}
+
+/* ALTERNATE ROW COLOR */
+tr:nth-child(even) {
+  background: #f9f9f9;
+}
+</style>
+</head>
+
+<body>
+
+<h2>Employee Table</h2>
+
+<div class="table-container">
+<table id="myTable">
+  <thead>
+    <tr>
+      <th onclick="sortTable(0)">Name</th>
+      <th onclick="sortTable(1)">Age</th>
+      <th onclick="sortTable(2)">Salary</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Ravi</td><td>25</td><td>30000</td></tr>
+    <tr><td>Arjun</td><td>30</td><td>50000</td></tr>
+    <tr><td>Sita</td><td>22</td><td>25000</td></tr>
+    <tr><td>Rahul</td><td>28</td><td>40000</td></tr>
+    <tr><td>Anu</td><td>35</td><td>60000</td></tr>
+  </tbody>
+</table>
+</div>
+
+<script>
+function sortTable(col) {
+  let table = document.getElementById("myTable");
+  let rows = Array.from(table.rows).slice(1);
+  let asc = table.getAttribute("data-sort") !== "asc";
+
+  rows.sort((a, b) => {
+    let x = a.cells[col].innerText;
+    let y = b.cells[col].innerText;
+
+    if (!isNaN(x) && !isNaN(y)) {
+      return asc ? x - y : y - x;
+    }
+    return asc ? x.localeCompare(y) : y.localeCompare(x);
+  });
+
+  rows.forEach(row => table.tBodies[0].appendChild(row));
+  table.setAttribute("data-sort", asc ? "asc" : "desc");
+}
+</script>
+
+</body>
+</html>
