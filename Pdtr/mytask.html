@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color:#f4f6f8; 
+            /* border: 2px solid black; */
+            
+        }
+        .form-container{
+            background-color:  #fff;;
+            padding: 25px 30px ;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 400px;
+        }
+          label {
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    h2{
+        text-align: center;
+        font-size: bold;
+    }
+    textarea{
+        min-height: 100px;
+    }
+    input, textarea{
+        padding: 10px;
+        border: 1px solid black;
+        border-radius: 6px;
+        font-size: 14px;
+        width: 100%;
+    }
+    input:focus, textarea:focus{
+        outline:none;
+        border-color: blue;
+              box-shadow: 0 0 5px rgba(0,123,255,0.4);
+    } */
+     /* input:focus, textarea:focus {
+      outline: none;
+      border-color: #007BFF;
+      /* box-shadow: 0 0 5px rgba(0,123,255,0.4); */
+    
+
+    button:hover{
+        background-color:blue ;
+    }
+    button{
+        width: 100%;
+        padding: 10px;
+        font-size: 20px;
+        background-color: wheat;
+    }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+    <form>
+            <h2>contact form</h2>
+
+        <label for="fullname">FullName:</label><br><br>
+        <input type="text" id="fullname" name="fullname" placeholder="enter the name" required ><br><br>
+        
+        <label for="email">Email Address:</label><br><br>
+        <input type="email" id="email" name="email" placeholder="enter the email"><br><br>
+
+        <label for="phonenumber">Phone Number</label><br><br>
+        <input type="tel" id="phonenumber" name="phonenumber" placeholder="enter the number"><br><br>
+
+        <label for="message">Message</label><br><br>
+        <textarea id="message" name="message" placeholder="enter the comment"></textarea> <br><br>
+
+        <button>submit</button>
+    </form>
+    </div>
+</body>
+</html>
