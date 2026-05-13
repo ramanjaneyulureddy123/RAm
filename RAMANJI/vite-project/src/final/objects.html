@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{height:2000px}
+    </style>
+</head>
+<body>
+
+    <input type="text" id="search" placeholder="type here"/>
+    <script>
+        const obj1={name:"anji", age:20}
+                const obj2={name:"anjeyulu", age:25}
+                function diff(obj1,obj2){
+                    let result={}
+                    for (let key in obj2){
+                        if(obj1[key]!== obj2[key]){
+                            result[key]=obj2[key]
+                        }
+                    }
+                    return result
+                }
+console.log(diff(obj1,obj2))
+
+function debounce(fn,delay){
+    let timer;
+
+    return function(...args){
+        clearTimeout(timer)
+        timer=setTimeout(()=>{
+            fn(...args)
+        },delay)
+    }
+}
+
+let handleCount=0;
+function handle(e){
+    handleCount++;
+    console.log("debounced execution",
+        handleCount, e.target.value
+    )
+}
+const d=debounce(handle,2000)
+document.getElementById("search").addEventListener("input",d)
+
+
+function throttle(fn, delay) {
+
+      let lastCall = 0;
+
+      return function (...args) {
+
+        let now = Date.now();
+
+        if (now - lastCall >= delay) {
+
+          fn(...args);
+
+          lastCall = now;
+        }
+      };
+    }
+    
+    // Throttle Test
+    let scrollCount = 0;
+
+    function handleScroll() {
+
+      scrollCount++;
+
+      console.log(
+        "Throttle Executed:",
+        scrollCount
+      );
+    }
+
+    const throttledScroll =
+      throttle(handleScroll, 1000);
+
+    window.addEventListener(
+      "scroll",
+      throttledScroll
+    );
+
+    </script>
+</body>
+</html>

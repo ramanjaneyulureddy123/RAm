@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+    <div id="parent">
+  Parent
+  <button id="child">Click Me</button>
+</div>
+
+<!-- <ul id="list">
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ul> -->
+
+<input id="input" placeholder="enter item"/>
+<button id="addbtn">add</button>
+<ul id="list"></ul>
+    <script>
+        // event bubbling 
+        document.getElementById("child").addEventListener("click", () => {
+  console.log("child clicked");
+});
+
+document.getElementById("parent").addEventListener("click", () => {
+  console.log("Parent clicked");
+});
+
+// event capturing 
+
+document.getElementById("parent").addEventListener("click",()=>{
+    console.log("parent first")
+},true)
+
+document.getElementById("child").addEventListener("click",()=>{
+    console.log("child second")
+})
+
+// const list = document.getElementById("list");
+
+// list.addEventListener("click", function (e) {
+//   if (e.target.tagName === "LI") {
+//     console.log("Clicked:", e.target.innerText);
+//   }
+// });
+
+const input= document.getElementById("input")
+const addbtn=document.getElementById("addbtn")
+const list=document.getElementById("list")
+
+addbtn.addEventListener("click",()=>{
+    if(input.value.trim()==="") return;
+
+    const li=document.createElement("li")
+    
+    li.innerHTML=`${input.value} <button class="delete"> delete</button>`
+    list.appendChild(li)
+    input.value=""
+
+})
+    list.addEventListener("click",function(e){
+    if(e.target.classList.contains("delete")){
+    e.target.parentElement.remove()
+    }
+})
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id=section>
+       <p id="name">name:anji</p>
+       <p id="role">role:engineer</p>
+       <p id="sal">sal:20000</p>
+    </div>
+
+    <p id="demo">hi friends</p>
+    <button onClick="my()">click</button>
+
+    <p id="memo"><b>hi</b>html</p>
+    
+    <script>
+function my(){
+    document.getElementById("demo").innerText="welcome boss"
+}
+
+let c=document.getElementById("memo")
+c.innerHTML="<h1> hello world </h1>"
+console.log(c)
+
+
+let a=document.getElementById("section")
+console.log(a)
+
+console.log(a.parentElement)
+console.log(a.children)
+console.log(a.firstElementChild)
+console.log(a.lastElementChild)
+
+let siblings=document.getElementById("name")
+console.log(siblings.nextElementSibling)
+
+let presib=document.getElementById("role")
+console.log(presib.previousElementSibling)
+
+
+
+</script>
+</body>
+</html>
