@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let user = {
+
+   name:"Ram",
+
+   greet:function(){
+      console.log("Hello");
+      console.log(this .name)
+   }
+
+}
+user.greet();
+
+let obj={
+    brand:"bmw",
+    wheels:4
+}
+console.log(obj["brand"])
+
+function Create(name,sal){
+    this.name=name;
+    this.sal=sal
+}
+let person1=new Create("vijay",200)
+
+console.log(person1)
+
+class User{
+constructor(hike,position){
+    this.hike=hike;
+    this.position=position;
+}
+}
+
+let u1=new User("2 percent","engineer")
+console.log(u1)
+</script>
+</body>
+</html>

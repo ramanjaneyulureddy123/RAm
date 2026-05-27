@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="history.back()">
+Back
+</button>
+<h1 id="title">hello</h1>
+<h3 id="titl">hello ravi</h3>
+
+<h3 id="id">web applications</h3>
+
+<p id="whole">ramu</p>
+<button onClick="changeText()">clicks</button>
+
+<h6 id="anji">anji</h6>
+<button onClick="changeColor()">rise</button>
+
+<input type="text" id="inputBox">
+<h1 id="output"></h1>
+<button onclick="showText()">Show</button>
+
+<ul id="list"></ul>
+<button onclick="addItem()">Add</button>
+
+    <script>
+
+
+document.getElementById("title").innerHTML="Hi <b> boss<b>"
+
+document.getElementById("titl").innerText="changed <b>Text<b>"
+
+    document.getElementById("id").style.color="pink"
+
+    function changeText(){
+        document.getElementById("whole").innerText="button is used"
+    }
+
+    function changeColor(){
+        document.body.style.backgroundColor="yellow"
+    }
+
+    function showText() {
+    let text = document.getElementById("inputBox").value;
+    document.getElementById("output").innerText = text;
+}
+
+function addItem() {
+    let li = document.createElement("li");
+    li.innerText = "New Item";
+    document.getElementById("list").appendChild(li);
+}
+        // window.alert("welocme to software")viayvi
+
+        // let name=window.prompt("enter the name")
+        // window.alert("hello"+name)
+
+//         let result = window.confirm("Do you want to continue?");
+
+// if(result){
+//     console.log("Yes selected");
+// } else {
+//     console.log("Cancelled");
+// }
+console.log(window.innerWidth)
+console.log(window.innerHeight)
+console.log(window.location.href);
+// navigator 
+
+console.log(navigator.userAgent)
+console.log(navigator.language)
+console.log(navigator.platform)
+console.log(navigator.onLine)
+
+// local object
+console.log(location.href)
+console.log(location.hostname)
+console.log(location.pathname)
+console.log(location.protocol)
+// location.reload();
+// location.href = "https://google.com"
+
+console.log(screen.width)
+console.log(screen.height)
+
+// history object 
+// history.back();
+
+
+    </script>
+</body>
+</html>

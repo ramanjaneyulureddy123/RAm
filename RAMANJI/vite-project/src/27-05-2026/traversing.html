@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="parent">
+<h1 id="one">dom traversing</h1>
+<p id="two">this is DOM</p>
+<h6 id="three">it is name</h6>
+</div>
+
+<div id="box" class="container"></div>
+
+<div id="boxx"></div>
+
+
+<div id="set">hello</div>
+
+<div id="add">
+    <h2>anji</h2>
+</div>
+
+<div id="box">
+    <p>Hello</p>
+</div>
+ <script >
+
+    let an = document.createElement("h1");
+
+an.innerText = "Hi Guru";
+
+document.getElementById("box").prepend(an);
+
+    let b=document.getElementById("one")
+console.log(b.parentElement)
+
+    let a=document.getElementById("parent")
+console.log(a.children)
+
+
+console.log(a.firstElementChild)
+
+console.log(a.lastElementChild)
+
+let c=document.getElementById("two")
+console.log(c.nextElementSibling)
+
+console.log(c.previousElementSibling)
+
+let attribute=document.getElementById("box")
+console.log(attribute.getAttribute("id"))
+
+console.log(attribute.getAttribute("class"))
+
+let x=document.getElementById("boxx")
+x.setAttribute("class", "contain")
+
+console.log(x)
+
+x.setAttribute("class","new")
+console.log(x)
+
+let y=document.getElementById("set")
+
+y.setAttribute("class", "whole")
+y.setAttribute('title',"heading")
+y.setAttribute("style", "color:red")
+
+console.log(y)
+
+let data=document.createElement("h1")
+data.innerText="hi guru "
+console.log(data)
+
+document.getElementById("add").appendChild(data)
+
+// document.getElementById("add").remove()
+
+let add=document.createElement("h1")
+add.innerText="vijay kumar"
+
+document.getElementById("add").prepend(add)
+// console.log(add)
+
+let a1=Promise.resolve("complted")
+let a2=Promise.resolve("ok done")
+// let a2= Promise.reject("error")
+
+Promise.all([a1,a2])
+.then((a)=>{
+    console.log(a)
+})
+.catch((error)=>{
+    console.log(error)
+})
+
+let p1= Promise.resolve("HTML");
+let p2= Promise.reject("Error");
+let p3= Promise.resolve("JS");
+
+Promise.allSettled([p1, p2, p3])
+.then((result)=>{
+    console.log(result);
+});
+
+let b1=new Promise((resolve)=>{
+    setTimeout(()=>{
+        resolve("first done")
+    },2000)
+})
+
+let b2=new Promise((reject)=>{
+    setTimeout(()=>{
+        reject("first fail")
+    },3000)
+})
+
+Promise.race([b1,b2])
+.then((res)=>{
+    console.log(res)
+})
+.catch((error)=>{
+    console.log(error)
+})
+
+let c1=Promise.reject("fail")
+
+let c2=new Promise((resolve)=>{
+    setTimeout(()=>{
+    resolve("success")
+    },1000)
+})
+
+let c3=Promise.resolve("first and speed success")
+
+Promise.any([c1,c2,c3])
+.then((result)=>{
+    console.log(result)
+}).catch((error)=>{
+    console.log(error)
+})
+// 1.
+let print=new Promise((resolve)=>{
+    setTimeout(()=>{
+        resolve("hello guru")
+    },2000)
+})
+
+.then((res)=>{
+    console.log(res)
+})
+
+ </script>   
+
+</body>
+</html>

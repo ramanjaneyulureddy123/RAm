@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onClick="change()">click</button>
+    <p id="text">hello boss</p>
+
+    <button onClick="increment()">increase</button>
+    <button onClick="decrement()">decrease</button>
+    <button onClick="reset()">reset</button>
+    <p id="count">0</p>
+    <script>
+
+        function hai(){
+            console.log("this is function declaration")
+        }
+        hai()
+
+        let action= function hello(){
+console.log("named function")
+        }
+        action()
+
+        let greet=function(){
+            console.log("anonymous function")
+        }
+        greet()
+// arrow function 
+        const add=(a,b)=>{
+            return a+b
+        }
+        console.log(add(4,5))
+
+        let name="rajesh"
+        console.log(`hello ${name}`)
+
+        let a=1
+        let b=2
+        console.log(a+b)
+        console.log(a-b)
+        console.log(a*b)
+        console.log(a/b)
+
+        let num=6
+        if(num %2==0){
+            console.log("even")
+        }else{
+            console.log("odd")
+        }
+
+        let c=10
+        let d=25
+        let e=15
+         if(c>d && c>e){
+            console.log(c)
+         }else if(d>c && d>e){
+            console.log(d)
+         }else{
+            console.log(e)
+         }
+
+// using math max 
+let x=10 
+let y=20
+let z=30
+console.log(Math.max(x,y,z))
+
+let str="abusaleha"
+let reversed=""
+for (let i=str.length-1; i>=0; i--){
+    reversed +=str[i]
+}
+
+console.log(reversed)
+
+function fac(num){
+    let fact=1;
+    for(let i=1; i<=num; i++){
+        fact=fact*i
+    }
+    return fact
+}
+console.log(fac(4))
+
+function countvowel(str){
+    let count=0
+    let vowels="aeiou"
+    for(let i=0; i<str.length; i++){
+        if(vowels.includes(str[i])){
+            count++
+        }
+    }
+    return count
+}
+
+countvowel("anji")
+
+function large(arr){
+    let max=arr[0]
+    for(let i=1; i<arr.length; i++){
+        if(arr[i]>max){
+            max=arr[i]
+        }
+    }
+    return max
+}
+
+console.log(large([2,3,4,5,8]))
+
+let a1=[1,2,3,1,2,3]
+let data= [...new Set(a1)]
+console.log(data)
+
+function remove(arr){
+    return[...new Set(arr)]
+}
+
+console.log(remove([10,20,20,30,30]))
+
+let array=[3,5,6,55,1,2]
+array.sort((a,b)=>a-b)
+console.log(array)
+
+let array1=[3,4,2,7,1]
+array1.sort((a,b)=>(b-a))
+console.log(array1)
+
+let b1=[10,20,30,10]
+let sum=0
+for (let i=0; i<b1.length; i++){
+    sum=sum +b1[i]
+
+}
+console.log(sum)
+
+function change(){
+    document.getElementById("text").innerText="hello medam"
+}
+
+let count=0
+function increment(){
+    count++
+    document.getElementById("count").innerText=count
+}
+function decrement(){
+    count--
+    document.getElementById("count").innerText=count
+}
+function reset(){
+    count=0;
+    document.getElementById("count").innerText=count
+}
+(function () {
+    console.log("This runs immediately!")
+})()
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        h2,h1{
+            color:blue;
+            background-color:yellow;
+            font-size:20px
+        }
+        table{
+            border-collapse:collapse;
+            color:red;
+            background-color: violet;
+            width:500px;
+            margin:auto;
+
+        }
+        tr,td{
+             padding:10px 15px;
+             border:2px solid black
+
+        }
+
+        .button:hover{
+background-color: aqua;
+        }
+        .button{
+            transition:0.5s;
+            background-color:red;
+            color:white;
+            padding:20px 25px
+        }
+    </style>
+</head>
+<body>
+    <button class="button">submit click</button><br><br>
+    <form onSubmit="form()">
+        <label>Email</label>
+        <input type="email" palceholder="enter the email" name="email" required><br><br>
+        <label>Password</label>
+        <input type="password" minlength="8"  required><br><br>
+        <label>phone NUmber</label>
+<input type="tel" name="Phone number" pattern="[0-9]{10}" required><br><br>
+
+<button type="submit"> submit</button>
+    </form>
+<form>
+<label>Username:</label>
+<input type="text" value="username" placeholder="enter the name"><br><br>
+<label>Password:</label>
+<input type="passowrd" value="password"><br><br>
+<button type="submit">submit</button>
+</form>
+
+<h2>final attempt</h2>
+<ol>
+    <li>first step</li>
+        <li>second step</li>
+    <li>third step</li>
+</ol>
+
+<ul>
+    <li>watching movies</li>
+    <li>listening to music</li>
+    <li>travelling</li>
+</ul>
+
+<table border="1" >
+
+    <tr>
+    <th>Name</th>
+        <th>Age</th>
+            <th>sal</th>
+    </tr>
+   
+    <tr>
+    <td rowspan="2">anji</td>
+    <td>22</td>
+        <td>100</td>
+    </tr>
+    <tr>
+    <td>anji</td> 
+    <td>22</td>
+    <td>100</td>
+    </tr>
+    <tr>
+        <td colspan="2">total</td>
+        <td >200</td>
+    </tr>
+    
+</table>
+
+    <h1>THIS IS WEB PAGE</h1>
+    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, unde.</p>
+    <img src="../practice/image.html.webp" alt="nature image">
+    <a href="https://www.google.com"> google link</a>
+
+    <script>
+        function form(){
+            alert("successful")
+        }
+    </script>
+</body>
+</html>
+
+
+

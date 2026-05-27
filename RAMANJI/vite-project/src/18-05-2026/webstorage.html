@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Hello</h1>
+    <h1>Student Details</h1>
+<p>Name: Anji</p>
+<p>Age: 22</p>
+
+<button onclick="window.print()">
+Print
+</button>
+
+<button onClick="handleClick()">click</button>
+
+    <script>
+        function handleClick(){
+            alert("button rised")
+        }
+
+        console.log("how")
+        document.write("hello")
+        // localStorage.setItem("name","anji")
+        // console.log(localStorage.getItem("name"))
+
+        // localStorage.removeItem("name")
+        //         console.log(localStorage.getItem("name"))
+
+                // localStorage.clear()
+                //         console.log(localStorage.getItem("name"))
+
+
+         sessionStorage.setItem("name","nagesh")
+    console.log(sessionStorage.getItem("name"))
+
+    // sessionStorage.removeItem("name")
+    // console.log(sessionStorage.getItem("name")) 
+    
+    // sessionStorage.clear()
+    //     console.log(sessionStorage.getItem("name")) 
+
+    let dairy={name:"raghava", age:33, role:"software"}
+
+    let dataa=JSON.stringify(dairy)
+    console.log(dataa)
+console.log(typeof dataa )
+
+localStorage.setItem( 
+    "dairy", JSON.stringify(dairy) 
+)
+
+let a=localStorage.getItem("dairy")
+console.log(a)
+
+let userData=JSON.parse(a)
+console.log(userData)
+
+console.log(typeof userData)
+console.log((userData.name))
+
+const variable = function (){
+    console.log('hello ',"baby" )
+}
+ variable()
+
+ function fun(){
+    console.log('first function')
+ }
+ function display(fn){
+     fn()
+
+ }
+ display(fun)
+
+ function inner(){
+     function outer(){
+        console.log("return a function")
+     }
+     return outer
+ }
+
+ let a1=inner()
+ a1()
+
+let m=prompt("enter the name")
+console.log(m)
+
+let now=new Date()
+console.log(now)
+
+
+    </script>
+</body>
+</html>
