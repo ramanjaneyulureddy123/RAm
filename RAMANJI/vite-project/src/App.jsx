@@ -4,6 +4,7 @@ import React from 'react'
 import Red from './20-05-2026/Red'
 import { Provider } from 'react-redux'
 import { store } from './20-05-2026/Reduxtopic'
+import Hook from './29-05-2026hooks/Hook'
 function App() {
   return (
     <div>
@@ -11,10 +12,10 @@ function App() {
 
       {/* <Appp/> */}
       {/* <Eventhandling/> */}
-      <Provider store={store}>
+      {/* <Provider store={store}>
         <Red/>
-      </Provider>
-
+      </Provider> */}
+<Hook/>
       
     </div>
   )

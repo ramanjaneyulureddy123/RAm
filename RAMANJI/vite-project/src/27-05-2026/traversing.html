@@ -154,6 +154,22 @@ let print=new Promise((resolve)=>{
     console.log(res)
 })
 
+let age=19
+
+let checkage=new Promise((resolve,reject)=>{
+    if(age>=18){
+        resolve("eligible")
+    }else{
+        reject("not eligible")
+    }
+})
+checkage
+.then((result)=>{
+    console.log(result)
+})
+.catch(error=>{
+    console.log(error)
+})
  </script>   
 
 </body>
