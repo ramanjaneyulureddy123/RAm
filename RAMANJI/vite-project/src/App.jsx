@@ -7,6 +7,7 @@ import React from 'react'
 // import Hook from './hooks29-05-2026/Hook'
 // import Toggle from './assement/Toggle'
 import UseEffect from './hooks29-05-2026/UseEffect'
+import UseContext from './useContext01-06-2026/UseContext'
 function App() {
   return (
     <div>
@@ -19,7 +20,8 @@ function App() {
       </Provider> */}
 {/* <Hook/> */}
 {/* <Toggle/> */}
-<UseEffect/>
+{/* <UseEffect/> */}
+<UseContext/>
       
     </div>
   )
