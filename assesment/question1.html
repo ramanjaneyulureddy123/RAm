@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>  
+
+    <!-- question 1  -->
+
+    <h1> registration form</h1>
+    <form onsubmit=" return registrationform()">
+     <label for="fullname">FullName</label>
+     <input type="text" name="fullname"  id="fullname" required> <br><br>
+
+     <label for="email">Email</label>
+     <input type="email" name="email"  id="email" required> <br><br>
+
+     <label >phonenumber</label>
+     <input type="tel" name="phonenumber"   > <br><br>
+
+     <label >password</label>
+     <input type="password" name="password"  id="password" > <br><br>
+
+     <button>Submit</button>
+     <input type="submit"> 
+
+</form>
+    
+    <script>
+         function registrationform(){
+                let fullname=document.getElementById("fullname").value;
+
+            let email=document.getElementById("email").value;
+            let password=document.getElementById("password").value;
+
+            if(fullname== ""){
+                alert("name must be filled")
+                return false;
+            }
+            if(!email.includes("@")){
+                alert("email must contain @")
+                return false;
+            }
+            if(password.length<8){
+                alert("passwod must be contain 8 characters")
+                return false;
+            }
+            alert("successfully submiteed")
+            return true;
+        }
+
+        //  3 question 
+function reverse(word){
+
+    let reversed=""
+    for (let i=word.length-1; i>=0; i--){
+        reversed +=word[i]
+    }
+     return reversed;
+     
+}
+
+console.log(reverse("javaScript"))
+
+
+// 8 question 
+
+function largenumber(arr){
+    let max=arr[0]
+
+    for(let i=1; i<arr.length; i++){
+        if (arr[i]>max){
+            max=arr[i]
+        }
+    }
+    return max;
+}
+
+console.log(largenumber([10,80,20,30]))
+
+
+// 10 question 
+
+function remove(array){
+return [...new Set(array)]
+}
+console.log(remove([1,1,2,2,3,4,4]))
+
+// 14 question 
+
+let num=7
+
+for (let i=1; i<=10; i++){
+    console.log(num + "*" +i + "=" +(num * i))
+}
+
+
+// question 
+
+
+
+
+
+
+    </script>
+</body>
+</html>
