@@ -96,8 +96,27 @@ for (let i=1; i<=10; i++){
     console.log(num + "*" +i + "=" +(num * i))
 }
 
+// 14 
+const cart = [
+  { name: "Laptop", price: 50000, qty: 1 },
+  { name: "Mouse", price: 500, qty: 2 },
+  { name: "Keyboard", price: 1500, qty: 1 }
+];
 
-// question 
+let totalQty = 0;
+let grandTotal = 0;
+
+for (let item of cart) {
+    let productTotal = item.price * item.qty;
+
+    console.log(item.name + " = " + productTotal);
+
+    totalQty += item.qty;
+    grandTotal += productTotal;
+}
+
+console.log("Total Quantity = " + totalQty);
+console.log("Grand Total = " + grandTotal); 
 
 
 

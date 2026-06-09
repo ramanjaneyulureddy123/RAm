@@ -6,6 +6,10 @@
     <title>Document</title>
 </head>
 <body>
+    <input type="number" id="number">
+<button onclick="table()">Show Table</button>
+
+<div id="output"></div>
 
     <!-- 11 question  -->
 <form onSubmit="return pass()">
@@ -17,6 +21,17 @@ pattern="?*./[A-Z]?*./[0-9]?*./[a-z].{8}">
 <button type="submit">submit</button>
 </form>
     <script>
+
+        function table() {
+    let num = document.getElementById("number").value;
+    let result = "";
+
+    for(let i = 1; i <= 10; i++) {
+        result = result + num + " x " + i + " = " + (num * i) + "<br>";
+    }
+
+    document.getElementById("output").innerHTML = result;
+}
        function pass(){
                     let password=document.getElementById("password").value;
 
