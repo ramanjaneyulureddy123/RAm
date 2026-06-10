@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>employee id</th>
+                <th>employee name</th>
+                <th>department</th>
+                <th>salary</th>
+            </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+
+    </table>
+    <script>
+        let employees=[    
+            {id:1, name:"anji", department:"soft",salary:10000},
+            {id:1, name:"anji", department:"soft",salary:10000},
+            {id:1, name:"anji", department:"soft",salary:10000},
+                        {id:1, name:"anji", department:"soft",salary:10000},
+            {id:1, name:"anji", department:"soft",salary:10000}
+        ]
+
+        let tbody=document.getElementById("tbody")
+        for( let i=0; i<employees.length; i++){
+            tbody.innerHTML += ` 
+            <tr>
+                <td>${employees[i].id}</td>
+                <td> ${employees[i].name}</td>
+                <td> ${employees[i].department}</td>
+                <td> ${employees[i].salary}</td>
+                </tr>
+            `
+        }
+
+
+        function reverseString(str) {
+    let reversed = "";
+
+    for(let i = str.length - 1; i >= 0; i--) {
+        reversed += str[i];
+    }
+
+    return reversed;
+}
+
+// let input = prompt("Enter the string");
+// console.log(reverseString(input));
+
+
+// let marks= Number(prompt("enter the marks")) 
+// let grade;
+// if (marks >= 90) {
+//     console.log("Grade A");
+// }
+// else if (marks >= 75) {
+//     console.log("Grade B");
+// }
+// else if (marks >= 60) {
+//     console.log("Grade C");
+// }
+// else if (marks >= 40) {
+//     console.log("Grade D");
+// }
+// else {
+//     console.log("Fail");
+// }
+
+// console.log("Grade:", grade)
+
+let marks = Number(prompt("Enter the marks"));
+let grade;
+
+if (marks < 0 || marks > 100) {
+    console.log("Invalid Marks");
+}
+else if (marks >= 90) {
+    grade = "A";
+}
+else if (marks >= 75) {
+    grade = "B";
+}
+else if (marks >= 60) {
+    grade = "C";
+}
+else if (marks >= 40) {
+    grade = "D";
+}
+else {
+    grade = "Fail";
+}
+
+if (grade) {
+    console.log("Grade:", grade);
+}
+    </script>
+</body>
+</html>
