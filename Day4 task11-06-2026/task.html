@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        (function (){
+            console.log("IIFE");
+        })();
+                    
+
+
+        (function (name){
+            console.log("hello" + name);
+        })("vijay");
+
+        (function (){
+            let msg="private "
+            console.log(msg)
+        })()
+        // console.log(msg)
+
+        function add(a, b) {
+    return a + b;
+}
+
+console.log(add(2, 3))
+
+function square(num) {
+    return num * num;
+}
+
+console.log(square(4))
+
+function calgst(price){
+    return price + (price * 18/100)
+}
+
+console.log(calgst(100))
+console.log(calgst(100))
+
+// impure function 
+
+let total =0
+function addTotal(value){
+    total +=value;
+    return total
+}
+
+console.log(addTotal(3))
+console.log(addTotal(3))
+console.log(addTotal(4))
+
+let count=0
+function coun(){
+    count++
+    return count;
+}
+
+console.log(coun())
+console.log(coun())
+
+// console.log(coun(1))
+console.log(coun())
+// console.log(coun(1))
+
+let balance=1000
+
+function amount(deposit){
+    balance +=deposit
+    return balance
+}
+
+console.log(amount(100))
+console.log(amount(100))
+
+// closures 
+
+function outer(){
+    let x=10;
+    function inner(){
+        console.log(x);
+    }
+     return inner
+}
+
+let fn=outer()
+
+fn();
+
+
+function out(){
+    let name="vijay"
+    function inner(){
+        console.log(name)
+    }
+    return inner
+}
+
+out()()
+//  let a=out()
+//  a()
+
+
+ function greet(name){
+    return "hello "+ name;
+ }
+
+ function second(fn){
+    console.log(fn("vijay"))
+    console.log(fn)
+ }
+
+ second(greet)
+
+//  function first(){
+//     return function (){
+//         console.log("return function")
+//     }
+//  }
+//  let b=first()
+//  b()
+        //  console.log("return function")
+
+
+// this (object)
+        const person={
+            name:"mike",
+            greet:function(){
+                console.log(this.name)
+            }
+        }
+        person.greet()
+
+// console.log(this)
+
+// arrow  
+
+// let first ={
+//     name:"kumar",
+//     greet:()=>{
+//         console.log(this.name)
+//     }
+// }
+
+// first.greet() // undefined 
+
+let first ={
+    name:"kumar",
+    greet (){
+        const second=()=>{
+        console.log(this.name)
+        }
+        second()
+    }
+}
+
+first.greet()
+
+function greet() {
+    console.log(this.name);
+}
+
+const p1 = {
+    name: "Kumar",
+    greet
+};
+
+const p2 = {
+    name: "Ravi",
+    greet
+};
+
+p1.greet()
+p2.greet()
+
+// object 
+const persons = {
+    name: "Krishna",
+    age: 25
+};
+
+console.log(persons.name)
+console.log(persons.age)
+
+// regular function 
+
+function greet(name) {
+    return "Hello " + name;
+}
+
+console.log(greet("kilash"))
+
+
+const news = (word)=>{
+    return "world becomes " +word
+}
+
+console.log(news("powerful"))
+
+
+function cal(){
+    console.log(this.value)
+}
+const word ={ value:"nature is beautiful"}
+
+cal.call(word)
+
+
+function app(city){
+    console.log(this.name +" from "+ city)
+}
+let members ={
+    name:"abhu"
+}
+
+app.apply(members,["kadapa"])
+
+function greett() {
+    console.log(this.name);
+}
+
+const f = greett.bind({ name: "Kumar" });
+f()
+
+
+function greet() {
+    console.log("Hello " + this.name);
+}
+const perso = {
+    name: "Kumar"
+};
+const newFunc = greet.bind(perso);
+
+newFunc();
+    </script>
+</body>
+</html>
