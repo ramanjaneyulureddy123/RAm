@@ -99,6 +99,24 @@ else {
 if (grade) {
     console.log("Grade:", grade);
 }
+
+let arr=[1,2,3,4,2,3,4,7]
+
+function remove(arr){
+    return [...new Set(arr)]
+}
+
+let updatedvalue=remove(arr)
+
+console.log("original:", arr)
+console.log("updatedvalue:", updatedvalue)
+
+let array=[1,2,1,2]
+
+let show=[...new Set(array)]
+
+console.log(array)
+console.log(show)
     </script>
 </body>
 </html>
