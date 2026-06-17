@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    let student={
+        name:"anji",
+        age:29
+    }
+    for (let details in student){
+        console.log(details, ":",student[details])
+        // console.log(details)
+        // console.log(student[details])
+    }
+
+    const employees={
+        anji:40000,
+        smith:60000,
+        naga:80000
+    }
+    for (let name in employees){
+        console.log(name, "earns",employees[name])
+    }
+
+    const marks={
+        telugu:90, 
+        english:70,
+    }
+    for (let subject in marks){
+        marks[subject] +=5
+        // console.log(subject)
+    }
+    console.log(marks)
+
+
+    // dates 
+let today=new Date()
+console.log(today)
+console.log(today.getFullYear())
+console.log(today.getMonth())
+console.log(today.getDate())
+console.log(today.getDay())
+console.log(today.getHours())
+console.log(today.getMinutes())
+console.log(today.getSeconds())
+console.log(today.getTime())
+
+let date=new Date()
+date.setFullYear(2040)
+console.log(date)
+
+date.setMonth(11)
+console.log(date)
+
+const birthday=new Date("2026-06-17")
+console.log(birthday)
+
+console.log(new Date().toLocaleTimeString());
+
+const start = new Date("2026-06-01");
+const end = new Date("2026-06-17");
+
+const diff = end.getTime() - start.getTime()
+
+console.log(diff)
+
+const birthYear=2004
+const currentYear=new Date().getFullYear()
+
+console.log(currentYear-birthYear)
+
+let a= new Date()
+
+console.log(a.toDateString())
+console.log(a.toLocaleDateString())
+console.log(a.toTimeString())
+console.log(a.toLocaleTimeString())
+
+
+let name="anji"
+let age=33
+console.log(` my name is ${name} and my age is ${age}`)
+
+var x=10
+var y=20
+console.log(`Sum:${x+y}`)
+
+let now = new Date();
+console.log(`Today is ${now.toDateString()}`)
+console.log(`Current Time: ${now.toLocaleTimeString()}`)
+
+let product="oppo phone"
+let price=50000
+
+console.log(`product name is ${product}`)
+console.log(`price is ${price}`)
+console.log(`discount is ${price-5000}`)
+
+let num=8.3
+
+console.log(Math.floor(num))
+console.log(Math.ceil(num))
+console.log(Math.round(num))
+console.log(Math.trunc(num))
+console.log(Math.random(num))
+console.log(Math.floor(Math.random()*54)+1)
+console.log(Math.max(10,20,30,70))
+console.log(Math.min(10,20,30,70))
+console.log(Math.pow(2,4))
+console.log(Math.sqrt(64))
+console.log(Math.abs(-50))
+console.log(Math.PI)
+
+let person="bhasakar"
+console.log(person.toUpperCase())
+
+let nam="SAI KUMAR"
+console.log(nam.toLowerCase())
+
+console.log(nam.length)
+
+
+console.log(nam.charAt(1))
+
+console.log(nam.indexOf("K"))
+
+console.log(nam.includes("M"))
+
+let str="  hello "
+console.log(str.trim())
+
+let s="string, type, data"
+console.log(s.split(","))
+
+const studentt={
+    name:"arjun",
+    marks:87.6,
+    fee :20000
+}
+
+console.log("student details:")
+
+for (let key in studentt){
+    console.log(`${key} : ${studentt[key]}`)
+}
+
+let uppercase= studentt.name.toUpperCase()
+
+let markk=87.6
+
+let day=new Date()
+
+console.log(`name:${uppercase}
+marks:${markk} 
+date:${day.toLocaleDateString()} 
+`)
+
+console.log(`
+Welcome 
+To
+JavaScript
+`)
+
+
+</script>
+
+</body>
+</html>
