@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title">Welcome</h1>
+
+<button id="btn">Change Text</button>
+
+<p id="msg">Move mouse here</p>
+
+<input type="text" id="name">
+
+<form id="form">
+
+<input type="text" placeholder="enter the text">
+
+<button>Submit</button>
+
+</form>
+
+<input type="text" id="name">
+<input type="text" id="names" placeholder="type key">
+
+<script>
+    let title = document.getElementById("title");
+let btn = document.getElementById("btn");
+
+btn.addEventListener("click",()=> {
+    title.textContent = "Hello JavaScript";
+});
+
+let msg = document.getElementById("msg");
+
+msg.addEventListener("mouseover",()=> {
+    msg.style.color="red";
+})
+
+msg.addEventListener("mouseout",()=>{
+    msg.style.color = "pink";
+})
+
+let input=document.getElementById("name")
+input.addEventListener("input",()=>{
+    console.log(input.value)
+})
+
+let form = document.getElementById("form");
+
+form.addEventListener("submit", (event) => {
+
+    event.preventDefault()
+    console.log("Form Submitted")
+})
+
+let inputt = document.getElementById("names");
+
+inputt.addEventListener("keydown", (event) => {
+    console.log(event.key)
+})
+</script>
+</body>
+</html>

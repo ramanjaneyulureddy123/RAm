@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <h1 id="one">this is Tasks</h1>
+
+    <h1 id="one">this is Tasks of JS</h1>
+    <p id="title">this is query selector</p>
+
+<p>HTML</p>
+<p>CSS</p>
+<p>JavaScript</p>
+<p id="title">this is query selector</p>
+
+<p id="title">this is query selector</p>
+
+        <h2 class="whole">the heading of webpage</h2>
+
+    <h2 class="whole">the heading</h2>
+    <!-- <h2 class="whole">the heading of webpage</h2> -->
+
+<h6 id="page">hello</h6>
+<div id="box">
+<p>hai</p>
+</div>
+
+<!-- <img src="cat.jpg" id="cat"> -->
+
+<h3 class="queen" id="king">this modifying of class name</h3>
+
+<div id="container">
+<p id="o">one</p>
+<p id="t">three</p>
+<p id="th">four</p>
+
+</div>
+
+<div id="main">
+    <p id="x">this process is removig the element</p>
+    <p id="y">this is remove specific element</p>
+    <p id="z">another element</p>
+</div>
+
+<button id="btn">Click Me</button>
+<!-- -------------------- -->
+ <h1 id="title">Welcome</h1>
+
+<button id="btn">Change Text</button>
+    <script>
+
+let button=document.getElementById("btn")
+button.addEventListener("click",()=>{
+    console.log("button Clicked")
+})
+// -------------------------------
+
+let title=document.getElementById("title")
+let b=document.getElementById("btn")
+
+b.addEventListener("click",()=>{
+    title.textContent ="hello webpage its created";
+})
+
+
+
+let one=document.getElementById("one")
+console.log(one)
+
+let second=document.querySelector("#title")
+console.log(second)
+
+let s=document.querySelector(".whole")
+console.log(s)
+
+let t=document.querySelector("h1")
+console.log(t)
+
+let all=document.querySelectorAll("p")
+console.log(all)
+console.log(all[0].textContent)
+console.log(all[1].textContent)
+
+// read and modify 
+let h=document.getElementById("page")
+console.log(h.textContent)
+h.textContent="hello world"
+console.log(h)
+
+// innerHTML
+let i=document.getElementById("box")
+console.log(i.innerHTML)
+i.innerHTML="<h2> this is modifying </h2>"
+console.log(i)
+
+// attributes
+
+// let att=document.getElementById("cat")
+// console.log(att.src)
+// att.src="dog.png"
+// console.log(att)
+
+// className
+let c=document.getElementById("king")
+console.log(c.className)
+c.className="main-class"
+console.log(c)
+
+let traverse=document.getElementById("o")
+console.log(traverse.parentElement)
+
+let child=document.getElementById("container")
+console.log(child.children)
+console.log(child.children[0])
+
+console.log(child.firstElementChild)
+console.log(child.lastElementChild)
+
+let next=document.getElementById("t")
+console.log(next.nextElementSibling)
+
+
+let previous=document.getElementById("th")
+console.log(previous.previousElementSibling)
+
+
+// adding element 
+let para=document.createElement("h5")
+console.log(para)
+
+para.textContent="this is heading h5"
+document.body.appendChild(para)
+
+let image=document.createElement("img")
+
+image.src="cat.jpg"
+image.alt="cat iamge"
+
+document.body.appendChild(image)
+console.log(image)
+
+// remove element 
+let msg=document.getElementById("main")
+let y=document.getElementById("y")
+
+// console.log(msg)
+// msg.remove()
+msg.removeChild(y)
+    </script>
+</body>
+</htm
