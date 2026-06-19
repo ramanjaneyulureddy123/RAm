@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     
+
+  <h1 id="timer">10</h1>
+
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <button id="reset">Reset</button>
+
+    <h1 id="one">good morning</h1>
+    <h2 class="two">good evening</h2>
+    <p id="three">hello </p>
+    <p id="four">hai</p>
+
+    <div id="whole">
+<h1 id="anji">anji</h1>
+<p id="ramu">ramu</p>
+<h6 id="vijay">vijay</h6>
+<p id="remove">remove </p>
+</div>
+
+<div id="box"></div>
+    </div>
+
+<p id="main">hello website </p>
+<button id="btn">change</button>
+
+<p id="msg">Move mouse here</p>
+
+    <script>
+
+        let a=document.getElementById("one")
+        console.log(a)
+        let b=document.getElementsByClassName("two")
+        console.log(b)
+        let c= document.querySelector("p")
+        console.log(c)
+        let d= document.querySelectorAll("p")
+        console.log(d)
+
+        let heading=document.getElementById("three")
+        console.log(heading.textContent)
+
+        heading.textContent="hello guru"
+console.log(heading.textContent)
+
+let element=document.getElementById("anji")
+console.log(element.parentElement)
+
+let elements=document.getElementById("whole")
+console.log(elements.children)
+console.log(elements.firstElementChild)
+console.log(elements.lastElementChild)
+
+let next=document.getElementById("ramu")
+console.log(next.nextElementSibling)
+console.log(next.previousElementSibling)
+
+
+let box=document.getElementById("box")
+let create=document.createElement("h6")
+create.textContent="this is h6 heading"
+// document.body.appendChild(create)
+box.appendChild(create)
+
+let remove=document.getElementById("remove")
+remove.remove()
+ 
+let main=document.getElementById("main")
+let btn=document.getElementById("btn")
+btn.addEventListener("click",()=>{
+    main.textContent="welcome to website"
+})
+
+let msg = document.getElementById("msg");
+
+msg.addEventListener("mouseover",()=> {
+    msg.style.color="pink";
+})
+
+msg.addEventListener("mouseout",()=>{
+    msg.style.color = "blue";
+})
+
+let count=10
+let timer;
+
+let countDown=document.getElementById("timer")
+
+document.getElementById("start").onclick=function (){
+    clearInterval(timer);
+    timer=setInterval(()=>{
+        countDown.textContent=count;
+        count--;
+
+        if(count<0){
+            clearInterval(timer)
+            countDown.textContent="time is up"
+        }
+    },1000)
+}
+
+document.getElementById("stop").onclick=function(){
+    clearInterval(timer)
+}
+document.getElementById("reset").onclick=function(){
+    clearInterval(timer)
+    count=10
+    countDown.textContent=count
+}
+
+
+    </script>
+</body>
+</html>

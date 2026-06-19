@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="add"> </div>
+
+    <button id="timeBtn">
+Show Current Time
+</button>
+<p id="clock"></p>
+
+<button id="startBtn">
+Start Countdown
+</button>
+
+<p id="countdown"></p>
+    <script>
+        // array operations
+        let marks=[50,70,30,90,67]
+
+        let totalMarks=marks.map(mark=>mark+5)
+        console.log(totalMarks)
+
+        let pass=marks.filter(mark=>mark>=60)
+        console.log(pass)
+
+        let total=marks.reduce((a,b)=>a+b,0)
+        console.log(total)
+
+        let fail=marks.some(mark=>mark<35)
+        console.log(fail)
+
+        let allpass=marks.every(mark=>mark>=35)
+        console.log(allpass)
+
+        // object creation 
+let student={
+    name:'anji',
+    age:22,
+    role:"software"
+}
+console.log(student)
+
+// Object copying 
+let copy=Object.assign({},student)
+console.log(copy)
+
+// date object 
+
+let today= new Date()
+console.log(today)
+
+console.log(today.getDate())
+console.log(today.getMonth()+1)
+console.log(today.getFullYear())
+
+// math Object
+
+console.log(Math.random())
+console.log(Math.floor(6.8))
+console.log(Math.ceil(4.8))
+console.log(Math.max(20,30))
+console.log(Math.trunc(4.8))
+// string Object 
+
+
+let str="  hello world "
+
+console.log(str.length)
+console.log(str.trim())
+console.log(str.toUpperCase())
+console.log(str.includes("world"))
+// dom manipulation element creation 
+
+let box=document.getElementById("add")
+let para=document.createElement("h1")
+para.textContent="this is paragraph";
+box.appendChild(para)
+console.log(para)
+// event handling 
+
+let timeBtn=document.getElementById("timeBtn")
+let clock=document.getElementById("clock")
+timeBtn.addEventListener("click",()=>{
+clock.textContent="Current Time :"+new Date().toLocaleTimeString();
+})
+// asynchrnous
+let start=document.getElementById("startBtn");
+let countdown=document.getElementById("countdown");
+start.addEventListener("click",()=>{
+let count=5;
+let timer=setInterval(()=>{
+countdown.textContent=count;
+count--
+if(count<0){
+clearInterval(timer);
+countdown.textContent="Time Up";
+}
+},1000);
+})
+    </script>
+</body>
+</html>
