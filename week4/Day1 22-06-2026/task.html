@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="parent">
+        <button id="button">bubbling click me</button>
+    </div>
+
+    <div id="p">
+    <button id="c">capturing Click Me</button>
+</div>
+
+<div id="container">
+    <button>Button 1</button>
+    <button>Button 2</button>
+    <button>Button 3</button>
+</div>
+
+
+    <button id="addBtn">Add Button</button>
+
+    <div id="container"></div>
+    <input type="text" id="name" paceholder="enter the value">
+
+    <button id="a">CLick event</button>
+
+    <form id="form">
+<input type="text" placeholder="Name">
+    <button>Submit</button>
+
+    <input type="text" id="value">
+    </form>
+
+    <select id="course">
+    <option>Java</option>
+    <option>Python</option>
+    <option>JavaScript</option>
+</select>
+    <script>
+
+
+
+        let btn=document.getElementById("a")
+        btn.addEventListener("click",()=>{
+            console.log("button clicked for click event")
+        })
+
+
+        let name=document.getElementById("name")
+        name.addEventListener("input",()=>{
+            console.log(name.value)
+        })
+
+let form =document.getElementById("form")
+form.addEventListener("submit",(event)=>{
+    event.preventDefault()
+    console.log("form submitted")
+})
+
+let city=document.getElementById("value")
+city.addEventListener("change",(event)=>{
+
+console.log(city.value)
+})
+
+let course = document.getElementById("course");
+
+course.addEventListener("change", () => {
+    console.log(course.value);
+})
+
+let parent=document.getElementById("parent")
+let child=document.getElementById("button")
+
+parent.addEventListener("click",()=>{
+    console.log("parent clicked")
+})
+
+child.addEventListener("click",()=>{
+    console.log("child clicked")
+})
+// child.addEventListener("click", (event) => {
+//     event.stopPropagation();
+//     console.log("Child clicked");
+// })
+
+let parentt = document.getElementById("p");
+let childd = document.getElementById("c");
+
+parentt.addEventListener("click", () => {
+    console.log("Parent clicked");
+}, true)
+
+childd.addEventListener("click", () => {
+    console.log("Child clicked");
+})
+
+let contain=document.getElementById("container")
+
+contain.addEventListener("click",(event)=>{
+    console.log(event.target.textContent)
+})
+
+// let container = document.getElementById("container");
+
+// container.addEventListener("click", (event) => {
+
+//     if (event.target.tagName === "BUTTON") {
+//         console.log(event.target.textContent);
+//     }
+
+// })
+
+let add=document.getElementById("addBtn")
+
+let container=document.getElementById("container")
+let count=1
+
+add.addEventListener("click",()=>{
+    let btn=document.createElement("button")
+    btn.textContent=`button ${count}`
+    container.appendChild(btn)
+    count++;
+})
+
+container.addEventListener("click",(event)=>{
+    if(event.target.tagName === "BUTTON"){
+        console.log(`${event.target.textContent}clicked`)
+    }
+})
+</script>
+</body>
+</html>
