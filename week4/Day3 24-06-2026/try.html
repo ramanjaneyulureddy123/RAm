@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         function checkAge(age){
+    if(age<18){
+        throw new Error("age must be 18 or above")
+    }
+    return "eligible"
+ }
+
+ try{
+    console.log(checkAge(13))
+ }catch(error){
+    console.log(error.message)
+ }finally{
+    console.log("finally block executed")
+ }
+
+ function check(password){
+    if(password.length<8){
+        throw new Error("password must be 8 character")
+    }
+    return "password accepted"
+ }
+ try{
+    console.log(check("abcrtyd"))
+ }catch(error){
+    console.log(error.message)
+ }
+
+ function validate(email){
+    if(!email.includes("@")){
+        throw new Error("invalid email")
+    }
+    return "email accepted"
+ }
+ try{
+    console.log(validate("mikegmail.com"))
+ }
+ catch(error){
+    console.log(error.message)
+ }
+    </script>
+</body>
+</html>
