@@ -1,4 +1,5 @@
 import React from 'react'
+import Ass from './25-06-2026/Ass'
 // import CartApp from './15-05-2026/Cart'
 
 // import Red from './20-05-2026/Red'
@@ -6,8 +7,6 @@ import React from 'react'
 // import { store } from './20-05-2026/Reduxtopic'
 // import Hook from './hooks29-05-2026/Hook'
 // import Toggle from './assement/Toggle'
-import UseEffect from './hooks29-05-2026/UseEffect'
-import UseContext from './useContext01-06-2026/UseContext'
 function App() {
   return (
     <div>
@@ -21,8 +20,10 @@ function App() {
 {/* <Hook/> */}
 {/* <Toggle/> */}
 {/* <UseEffect/> */}
-<UseContext/>
-      
+{/* <UseContext/> */}
+
+
+      <Ass/>
     </div>
   )
 }
