@@ -1,5 +1,5 @@
 import React from 'react'
-import Ass from './25-06-2026/Ass'
+import App from './final/Product'
 // import CartApp from './15-05-2026/Cart'
 
 // import Red from './20-05-2026/Red'
@@ -21,7 +21,7 @@ function App() {
 {/* <Toggle/> */}
 {/* <UseEffect/> */}
 {/* <UseContext/> */}
-
+<App/>
 
       <Ass/>
     </div>
