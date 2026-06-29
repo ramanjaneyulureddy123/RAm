@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+    .box1 {
+  width:200px;
+  height: 100px;
+  background: tomato;
+}
+
+.box2 {
+  width: 50%;
+  height: 200px;
+  background: skyblue;
+}
+
+.auto {
+  width: 300px;
+  height: auto;
+  background: lightgray;
+  padding: 10px;
+}
+
+.hero {
+  width: 100vw;
+  height: 100vh;
+  background-color:blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size:20px;
+}
+
+@media (max-width: 768px) {
+
+  .box1 {
+    width: 150px;
+    height: 80px;
+  }
+  .box2 {
+    width: 70%;
+    height: 150px;
+  }
+  .auto {
+    width: 80%;
+    font-size: 14px;
+  }
+  .hero {
+    font-size: 16px;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .box1 {
+    width: 120px;
+    height: 70px;
+  }
+  .box2 {
+    width: 90%;
+    height: 120px;
+  }
+  .auto {
+    width: 90%;
+    font-size: 13px;
+  }
+  .hero {
+    font-size: 14px;
+    text-align: center;
+    padding: 10px;
+  }
+}
+   </style>
+</head>
+<body>
+    <div class="box1">A</div>
+<div class="box2">B</div>
+
+<section class="hero">
+  Center content
+</section>
+
+<div class="auto">
+  This box grows automatically based on content inside. its expand based on content .
+</div>
+</body>
+</html>
