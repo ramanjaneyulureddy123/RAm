@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width:200px;
+            height:100px;
+            background-color: lightblue;
+        }
+        .padding{
+            padding:20px;
+            background-color: lightgray;
+            border: 2px solid black;
+        }
+            .border {
+  padding: 20px;
+  border: 5px solid red;
+}
+  .margin {
+  padding: 20px;
+  border: 2px solid black;
+  margin: 30px;
+}
+
+.box1 {
+  /* margin-bottom: 50px; */
+  background: lightblue;
+  height: 50px;
+}
+
+.box2 {
+  margin-top: 30px;
+  background: lightgreen;
+  height: 50px;
+}
+
+/* overflow  */
+.boxx {
+  width: 200px;
+  height: 100px;
+  border: 2px solid black;
+    overflow: visible;
+
+}
+.hidden{
+    margin:50px;
+    width:150px;
+    height:100px;
+    overflow:hidden;
+    border: 2px solid black;
+}
+.scroll{
+    margin:50px;
+    width:150px;
+    height:100px;
+    overflow:scroll;
+    border: 2px solid black;
+}
+
+.auto{
+  margin:50px;
+    width:150px;
+    height:100px;
+    overflow:auto;
+    border: 2px solid black;   
+}
+
+/* outline */
+.bbox {
+    margin:50px;
+  width: 200px;
+  height: 100px;
+  border: 3px solid blue;
+   outline: 5px solid red;
+  padding: 20px;
+}
+.outline-style{
+    width:100px;
+    height:100px;
+    border: 2px solid black;
+    outline-style: dashed;
+}
+.outline-width{
+    margin:10px;
+     width: 200px;
+  height: 100px;
+  border: 2px solid black;
+
+  outline-style: solid;
+  outline-width: 5px;
+}
+.outline-color{
+     width: 200px;
+  height: 100px;
+  border: 2px solid black;
+  outline-style: solid;
+  outline-color: red;
+}
+.outline{
+    margin:10px;
+     width: 200px;
+  height: 100px;
+  border: 2px solid black;
+  outline: 4px solid blue;
+}
+
+.offset{
+    margin: 40px;
+    width: 200px;
+  height: 100px;
+  border: 2px solid black;
+  outline: 3px solid green;
+  outline-offset: 10px;
+}
+
+/* css grid  */
+
+.container{
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "sidebar main"
+    "footer footer";
+    grid-template-columns: 200px 1fr;
+      grid-template-rows: auto 1fr auto;
+    height: 100vh;
+    gap:10px;
+}
+.header {
+  grid-area: header;
+  background: lightblue;
+  padding: 20px;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background: lightgray;
+  padding: 20px;
+}
+
+.main {
+  grid-area: main;
+  background: lightgreen;
+  padding: 20px;
+}
+
+.footer {
+  grid-area: footer;
+  background: orange;
+  padding: 20px;
+}
+
+
+    </style>
+</head>
+<body>
+<div class=" b red"></div>
+<div class=" b blue"></div>
+
+
+<div class="container">
+  <header class="header">Header</header>
+  <aside class="sidebar">Sidebar</aside>
+  <main class="main">Main Content</main>
+  <footer class="footer">Footer</footer>
+</div>
+
+
+    <div class="box">
+        content
+    </div>
+
+    <div class="padding">
+        Padding
+    </div>
+
+    <div class="border">
+border
+</div>
+
+<div class="margin">
+  Margin
+</div>
+
+<div class="box1">Box 1</div>
+<div class="box2">Box 2</div>
+
+<!-- overflow  -->
+
+<div class="boxx ">
+  This is a long text that goes outside the box because overflow is visible.This is a long text that goes outside the box becauThis is a long text that goecau
+</div>
+
+<div class="hidden">
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt fuga cumque asperiores eveniet nostrum libero numquam.
+</div>
+
+<div class="scroll">
+  This is a long text that requires scrolling to view completely.
+Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate, atque!
+</div>
+
+<div class="auto">
+  This is a long text that will show scroll only if needed.
+Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, vero?
+</div>
+
+<!-- outline -->
+
+ <div class="bbox">Border Box</div>
+
+ <div class="outline-style">Outline Style</div>
+ <div class="outline-width">Outline Width</div>
+ <div class="outline-color">Outline Color</div>
+ <div class="outline">Outline Shorthand</div>
+ <div class="offset">Outline Offset</div>
+
+
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Box Model</title>
+     <style>
+        .box {
+    width: 250px;              
+    height: 100px;
+    background-color: lightblue;
+
+    padding: 20px;             
+
+    border: 5px solid blue;   
+
+    margin: 30px;              
+}
+     </style>
+</head>
+<body>
+
+<div class="box">
+    CSS Box Model
+</div>
+
+</body>
+</html> -->
