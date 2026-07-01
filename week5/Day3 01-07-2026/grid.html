@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display:grid;
+            /* grid-template-columns:1fr 1fr ; */
+            grid-template-columns: repeat(4, 1fr);
+             grid-template-rows:100px 150px 200px;
+            gap:20px;
+            
+        }
+        .itemm{
+            background-color:red;
+        }
+
+        .r{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:10px;
+    /* justify-items:center; */
+    /* align-items:center; */
+}
+
+ .item{
+            background-color:blue;
+            padding:20px;
+        }
+        .header{
+            grid-column:1/4;
+            text-align:center;
+        }
+.b{
+    grid-row:2/4;
+}
+
+.containerr{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:150px 150px;
+    gap:10px;
+
+    place-items:center;
+}
+
+.i{
+    width:80px;
+    height:80px;
+    background:lightgreen;
+    text-align:center;
+    line-height:80px;
+}
+    </style>
+</head>
+<body>
+        <div class="container">
+        <div class="itemm">Item 1</div>
+        <div class="itemm">Item 2</div>
+        <div class="itemm">Item 3</div>
+        <div class="itemm">Item 4</div>
+        <div class="itemm">Item 5</div>
+        <div class="itemm">Item 6</div>
+    </div>
+
+    <div class="r">
+    <div class="item header">Header</div>
+    <div class="item b">Box 1</div>
+    <div class="item">Box 2</div>
+    <div class="item b">Box 3</div>
+    <div class="item ">Box 4</div>
+</div>
+
+<div class="containerr">
+    <div class="i">1</div>
+    <div class="i">2</div>
+    <div class="i">3</div>
+    <div class="i">4</div>
+</div>
+</body>
+</html>

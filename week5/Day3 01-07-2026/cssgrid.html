@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        .container{
+            display:grid;
+            grid-template-columns:200px 1fr;
+              gap:10px;
+               min-height:100vh;
+        }
+        header{
+
+    grid-column:1/3;
+
+    background:blue;
+    color:white;
+     display:grid;
+    place-items:center;
+        }
+
+aside{
+
+    background:grey;
+    color:white;
+}
+
+main{
+
+    background:#ecf0f1;
+    padding:20px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+    margin-top:20px;
+}
+.card{
+
+    background:white;
+
+    padding:40px;
+
+    text-align:center;
+
+    border-radius:10px;
+}
+footer{
+    grid-column:1/3;
+    background:black;
+    color:white;
+    display:grid;
+    place-items:center;
+
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>header</header>
+        <aside>Sidebar</aside>
+        <main>
+            <div class="cards">
+            <div class="card">card1</div>
+            <div class="card">Card2</div>
+<div class="card">Card3</div>
+<div class="card">Card4</div>
+</div>
+        </main>
+
+        <footer>Footer</footer>
+    </div>
+</body>
+</html>
