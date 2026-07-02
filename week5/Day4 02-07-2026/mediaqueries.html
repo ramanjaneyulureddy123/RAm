@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mobile{
+            width:400px;
+            height:200px;
+            /* background-color:blue; */
+        }
+
+        /* mobiles */
+        @media (max-width:400px){
+            .mobile{
+                background-color:red;
+                    width:100px;
+
+
+            }
+        }
+/* tablets */
+        @media (min-width:401px) and (max-width:600px){
+            .mobile{
+                background-color:green;
+                    width:200px;
+
+            }
+        }
+/* laptop */
+         @media (min-width:601px) and (max-width:1024px){
+            .mobile{
+                background-color:pink;
+                width:300px;
+
+            }
+        }
+/* desktop  */
+         @media (min-width:1025px) {
+            .mobile{
+                background-color:yellow;
+                width:400px;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <div class="mobile">box</div>
+</body>
+</html>

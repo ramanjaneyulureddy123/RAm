@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .image{
+            text-align:center;
+            margin-top:40px;
+            font-size:20px;
+        }
+       .image img{
+        width:600px;
+        max-width:100%;
+        height:auto;
+       }
+
+
+       @media (max-width:500px){
+        .image img{
+            width:450px;
+
+        }
+        .image {
+            text-align:center;
+            font-size:10px;
+
+        } 
+     nav{
+            flex-direction:column;
+            gap:10px;
+        }
+       }
+       nav{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        gap:20px;
+        background-color:pink;
+        padding:15px;
+
+       }
+       nav a{
+        text-decoration:none;
+       }
+       nav ul{
+        display:flex;
+        gap:10px;
+         list-style:none;
+       }
+       /* @media (max-width:501px){
+        
+        .image img{
+width:100%;
+        }
+       } */
+
+    </style>
+</head>
+<body>
+<div>
+    <nav>
+        <h2>Header</h2>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    </div>
+
+    <section class="image">
+    <img src="../Day1 29-06-2026/image.html.webp">
+    <h1>Responsive image</h1>
+    <p>this is nature image</p>
+    </section>
+</body>
+</html>

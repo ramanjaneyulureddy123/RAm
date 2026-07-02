@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display:flex;
+            flex-direction:column;
+            /* min-height:100vh; */
+        }
+        .grid{
+            display:grid;
+            grid-template-columns: repeat(3, 1fr);
+padding:20px;
+        gap:20px;
+        }
+       
+nav{
+    display:flex;
+    justify-content: space-between;
+    gap:10px;
+    background-color: aqua;
+padding:20px;
+}
+nav ul{
+    display:flex;
+    gap:20px;
+    list-style:none;
+}
+        footer{
+            background-color: black;
+            padding:20px;
+            color:white;
+        }
+        .grid div{
+        background-color: pink;
+        text-align:center;
+        padding:20px;
+        }
+         @media (max-width:768px){
+            .grid{
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width:480px){
+            .grid{
+             grid-template-columns: 1fr;
+            }
+            .grid div{
+             background-color: green;
+             color:white;
+            }
+             nav{
+        flex-direction: column;
+        align-items: center;
+    }
+            nav ul{ 
+                
+flex-direction: column;
+gap:20px;
+            }
+        }
+
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+  <div>
+  <nav>
+    <header>Header</header>
+     <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+  </nav>
+</div>
+  <main class="grid">
+    <div>Card 1</div>
+    <div>Card 2</div>
+    <div>Card 3</div>
+  </main>
+
+  <footer>Footer </footer>
+</div>
+</body>
+</html>
+
