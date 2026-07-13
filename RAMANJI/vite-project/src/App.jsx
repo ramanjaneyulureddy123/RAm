@@ -1,31 +1,22 @@
 import React from 'react'
 
-import Appp from './Day2 07-07-2026/Appp'
-import PP from '../../../week6/Day3 08-07-2026/PP'
-import State from '../../../week6/Day3 08-07-2026/State'
-import PtoC from '../../../week6/Day3 08-07-2026/PtoC'
-import CtoP from '../../../week6/Day3 08-07-2026/CtoP'
-import CtoC from '../../../week6/Day3 08-07-2026/CtoC'
+
+import GetRequest from '../../../week6/Day5 10-07-2026/GetRequest'
+import PostRequest from '../../../week6/Day5 10-07-2026/PostRequest'
+import RealAuth from '../../../week7/Day1 13-07-2026/RealAuth'
+import RealTheme from '../../../week7/Day1 13-07-2026/RealTheme'
 
 
 function App() {
   return (
     <div>
-    {/* <PP /> */}
-{/* <State /> */}
-{/* <PtoC /> */}
-{/* <CtoP /> */}
-<CtoC />
 
+{/* <AContext /> */}
+{/* <GetRequest /> */}
+{/* <PostRequest /> */}
+{/* <RealAuth/> */}
 
-
-{/* <Fragment/>     */}
-
-{/* <State/> */}
-{/* <Parentt /> */}
-{/* <Validinvalid/> */}
-
-{/* <Appp/> */}
+<RealTheme />
   </div>
   )
 }
