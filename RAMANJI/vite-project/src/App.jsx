@@ -1,22 +1,28 @@
 import React from 'react'
-
-
-import GetRequest from '../../../week6/Day5 10-07-2026/GetRequest'
-import PostRequest from '../../../week6/Day5 10-07-2026/PostRequest'
-import RealAuth from '../../../week7/Day1 13-07-2026/RealAuth'
-import RealTheme from '../../../week7/Day1 13-07-2026/RealTheme'
+import { Provider } from 'react-redux'
+import Axiosasyncawait from '../../../week6/Day5 10-07-2026/Axiosasyncawait'
+import Handleerror from '../../../week6/Day5 10-07-2026/Handleerror'
+// import {store} from "../../../week7/Day2 14-07-2026/RRedux"
+// import UseRedux from '../../../week7/Day2 14-07-2026/UseRedux'
+// import Usetoolkit from '../../../week7/Day2 14-07-2026/Usetoolkit'
+// import { store } from '../../../week7/Day2 14-07-2026/Reduxtoolkit'
 
 
 function App() {
   return (
     <div>
 
-{/* <AContext /> */}
-{/* <GetRequest /> */}
-{/* <PostRequest /> */}
-{/* <RealAuth/> */}
+{/* <Axiosasyncawait/> */}
+<Handleerror/>
 
-<RealTheme />
+
+{/* <Provider store={store}>
+  <UseRedux/>
+</Provider> */}
+
+{/* <Provider store={store}>
+  <Usetoolkit/>
+</Provider> */}
   </div>
   )
 }
