@@ -15,11 +15,13 @@ const counterSlice= createSlice({
 })
 
 export const {INC, DEC}=counterSlice.actions
-export default counterSlice.reducer
 
 export const storee =configureStore({
     reducer:{
-        counter:counterReducer
+        counter:counterSlice.reducer
     }
 })
+
+export default counterSlice.reducer
+
 

@@ -1,5 +1,6 @@
 import React, { createContext, useState } from 'react'
 import All from './All';
+import UUserreducer from './UUserreducer';
 
 
 export const ThemeContext=createContext()
@@ -14,6 +15,7 @@ function Thememini() {
     <div>
       <ThemeContext.Provider value={{theme , toggleTheme}}>
 <All/>
+<UUserreducer />
       </ThemeContext.Provider>
     </div>
   )

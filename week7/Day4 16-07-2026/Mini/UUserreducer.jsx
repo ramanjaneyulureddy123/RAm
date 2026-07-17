@@ -1,4 +1,5 @@
 
+import React, { useReducer, useState } from 'react'
 
 
 function reducer(state, action) {
@@ -14,13 +15,14 @@ function reducer(state, action) {
   }
 }
 
-import React, { useReducer, useState } from 'react'
 
 function UUserreducer() {
     const [text, setText] = useState("");
   const [todos, dispatch] = useReducer(reducer,[]);
   return (
     <div>
+
+      <h1 style={{ color: "red" }}>Hello useReducer</h1>
       <h2>Todo</h2>
 
       <input

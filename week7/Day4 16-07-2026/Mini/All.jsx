@@ -1,7 +1,8 @@
 import React, { useContext } from 'react'
-import { decrement, increment } from '../../Day2 14-07-2026/Reduxtoolkit';
 import { ThemeContext } from './Thememini';
 import {useSelector, useDispatch} from "react-redux";
+import { DEC, INC } from './CounterSlice';
+import UUserreducer from './UUserreducer';
 
 function All() {
 
@@ -38,6 +39,7 @@ function All() {
     
      <hr />
     
+    <UUserreducer />
     </div>
   )
 }
