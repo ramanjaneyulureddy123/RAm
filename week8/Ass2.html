@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="clock"></h1>
+    <script>
+        function reverse(sentence){
+            return sentence.split("").reverse().join("")
+    
+        }
+        console.log(reverse("hello"))
+
+
+        // --------------------------------
+
+      let arr=[1,2,3,2,4,5,1]
+
+      let duplicate =[...new Set(arr.filter((item,index)=>arr.indexOf(item)!==index))]
+      console.log(duplicate)
+        // ------------
+setInterval(()=>{
+    let time=new Date()
+    document.getElementById("clock").textContent=time.toLocaleTimeString()
+},1000)
+
+// -------------------
+
+    </script>
+</body>
+</html>
+
+

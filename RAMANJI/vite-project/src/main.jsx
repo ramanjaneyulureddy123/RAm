@@ -4,7 +4,19 @@ import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
+  <>
     <App />
-  </StrictMode>,
+  </>,
 )
+// import React from 'react'
+// import App from './App'
+
+// const main = () => {
+//   return (
+//     <div>
+//       <App/>
+//     </div>
+//   )
+// }
+
+// export default main

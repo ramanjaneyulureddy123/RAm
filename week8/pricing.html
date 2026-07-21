@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 20px;
+
+        }
+        .whole{
+            display:flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .card{
+            background-color:white;
+            width:250px;
+            padding:20px;
+            border-radius:10px;
+           box-shadow: 0 4px 10px;
+           transition:0.3s;
+            text-align:center;  
+        }
+        .card:hover{
+             transform: translateY(-10px);
+ box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+       
+        button{
+                padding:10px 20px;
+                background-color: red;
+                border:none;
+                cursor:pointer;
+        }
+
+       
+    </style>
+</head>
+<body>
+    <div class="whole">
+        <div class="card">
+  <h2>basic </h2>
+  <p>two month plan </p>
+  <p>features: high speed</p>
+  <p> Price:200</p>
+  <button>buy</button>
+        </div>
+
+        <div class="card standard">
+  <h2>standard</h2>
+  <p>two month plan </p>
+  <p>medium speed</p>
+    <p> Price:240</p>
+
+  <button>buy</button>
+        </div>
+        <div class="card">
+  <h2>premium</h2>
+  <p>low speed </p>
+    <p> Price:260</p>
+  <p>two month plan </p>
+  <button>buy</button>
+        </div>
+    </div>
+</body>
+</html>

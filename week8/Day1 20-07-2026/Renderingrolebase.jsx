@@ -30,7 +30,7 @@ function UserDashboard() {
   return (
     <div>
       <h2>User Dashboard</h2>
-      <p>You can view your profile and data.</p>
+      <p>You can view your profile and data</p>
     </div>
   );
 }

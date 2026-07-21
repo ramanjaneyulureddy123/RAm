@@ -1,16 +1,10 @@
-import React from 'react'
-import Reusable from '../../../week7/Day5 17-07-2026/Reusable'
-import Parent from '../../../week7/Day5 17-07-2026/Parent'
-import StudentForm from '../../../week7/Day5 17-07-2026/mini/StudentForm'
-import StudentList from '../../../week7/Day5 17-07-2026/mini/StudentList'
-import StudentContextAPI from '../../../week7/Day5 17-07-2026/mini/StudentContextAPI'
-import Conditionalrendering from '../../../week8/Day1 20-07-2026/Conditionalrendering'
-import Logicalandoperator from '../../../week8/Day1 20-07-2026/Logicalandoperator'
-import Switchcase from '../../../week8/Day1 20-07-2026/Switchcase'
-import ShowandHide from '../../../week8/Day1 20-07-2026/ShowandHide'
-import Renderingrolebase from '../../../week8/Day1 20-07-2026/Renderingrolebase'
-import Loadingstate from '../../../week8/Day1 20-07-2026/Loadingstate'
-import LoginLogout from '../../../week8/Day1 20-07-2026/LoginLogout'
+import React, { useState } from 'react'
+import Useeffectwithoutdep from '../../../week8/Day2 21-07-2026/Useeffectwithoutdep'
+import Cleartimeout from '../../../week8/Day2 21-07-2026/Cleartimeout'
+import Fetch from '../../../week8/Day2 21-07-2026/Fetch'
+import EAxios from '../../../week8/Day2 21-07-2026/EAxios'
+import Counterapplication from '../../../week8/Counterapplication'
+
 
 // import { Provider } from 'react-redux'
 // import { store } from '../../../week7/Day4 16-07-2026/TodoRedux'
@@ -21,8 +15,14 @@ import LoginLogout from '../../../week8/Day1 20-07-2026/LoginLogout'
 
 
 function App() {
+  const [show,setshow]=useState(true)
   return (
     <div>
+
+      {/* <Fetch/> */}
+      {/* <EAxios/> */}
+      {/* <Counterapplication/> */}
+      <Student/>
 {/* 
 <Provider store={storee}>
 <Thememini/>
@@ -34,18 +34,16 @@ quantity="1"
 price="40000"
 /> */}
  {/* <Parent/> */}
-{/* <StudentContextAPI>
+{/* /* <StudentContextAPI>
  <StudentForm/>
  <StudentList/>
- </StudentContextAPI> */}
+ </StudentContextA> */}
+ {/* <Useeffectwithoutdep/> */}
+ {/* <Cleartimeout/> */}
+{/* {show && <Cleartimeout/>} */}
+{/* <button onClick={()=>setshow(false)}>Remove component</button> */}
 
- {/* <Conditionalrendering/> */}
- {/* <Logicalandoperator/> */}
- {/* <Switchcase/> */}
- {/* <ShowandHide/> */}
- <Renderingrolebase/>
- {/* <Loadingstate/> */}
- <LoginLogout/>
+
 
 
   </div>
