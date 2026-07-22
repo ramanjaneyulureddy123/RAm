@@ -4,6 +4,11 @@ import Cleartimeout from '../../../week8/Day2 21-07-2026/Cleartimeout'
 import Fetch from '../../../week8/Day2 21-07-2026/Fetch'
 import EAxios from '../../../week8/Day2 21-07-2026/EAxios'
 import Counterapplication from '../../../week8/Counterapplication'
+import Handlestateuseeffect from '../../../week8/Day2 21-07-2026/Handlestateuseeffect'
+import Controlledcomponent from '../../../week8/Day3 22-07-2026/Controlledcomponent'
+import ImplementAllinputs from '../../../week8/Day3 22-07-2026/ImplementAllinputs'
+import Registrationform from '../../../week8/Day3 22-07-2026/Registrationform'
+import Dynamic from '../../../week8/Day3 22-07-2026/Dynamic'
 
 
 // import { Provider } from 'react-redux'
@@ -22,7 +27,12 @@ function App() {
       {/* <Fetch/> */}
       {/* <EAxios/> */}
       {/* <Counterapplication/> */}
-      <Student/>
+      {/* <Student/> */}
+      {/* <Handlestateuseeffect/> */}
+      {/* <Controlledcomponent/> */}
+      {/* <ImplementAllinputs/> */}
+      {/* <Registrationform/> */}
+      <Dynamic/>
 {/* 
 <Provider store={storee}>
 <Thememini/>
