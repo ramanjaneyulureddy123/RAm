@@ -7,6 +7,10 @@ import withAuthorization from '../../../week8/Day4 23-07-2026/withAuthorization'
 import Admin from '../../../week8/Day4 23-07-2026/Admin'
 import withSpinner from '../../../week8/Day4 23-07-2026/withSpinner'
 import Usespinner from '../../../week8/Day4 23-07-2026/Usespinner'
+import PConditional from '../../../week8/Day5 24-07-2026/PConditional'
+import Puseeffect from '../../../week8/Day5 24-07-2026/Puseeffect'
+import Pdynamic from '../../../week8/Day5 24-07-2026/Pdynamic'
+import Museeffect from '../../../week8/Day5 24-07-2026/practice/Museeffect'
 
 
 
@@ -22,22 +26,27 @@ function App() {
 
 
   // mini 
-  const Userspinner = withSpinner(Usespinner)
+  // const Userspinner = withSpinner(Usespinner)
 
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
 
   return (
     <div>
+
+      {/* <PConditional/> */}
+      {/* <Puseeffect/> */}
+      {/* <Pdynamic/> */}
+      <Museeffect/>
 
 {/* <ProtectDashboard/> */}
 {/* <UserLoaded loading={true}/> */}
 
 {/* <Authorization/> */}
-
+{/* 
 <Userspinner loading={loading} name="john"/>
  <button onClick={() => setLoading(!loading)}>
         Toggle Loading
-      </button>
+      </button> */}
   
 {/* {show && <Cleartimeout/>} */}
 {/* <button onClick={()=>setshow(false)}>Remove component</button> */}
