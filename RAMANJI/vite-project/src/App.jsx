@@ -11,6 +11,15 @@ import PConditional from '../../../week8/Day5 24-07-2026/PConditional'
 import Puseeffect from '../../../week8/Day5 24-07-2026/Puseeffect'
 import Pdynamic from '../../../week8/Day5 24-07-2026/Pdynamic'
 import Museeffect from '../../../week8/Day5 24-07-2026/practice/Museeffect'
+import Withreactmemo from '../../../week9/Day1 27-07-2026/Withreactmemo'
+import Shallowcomparision from '../../../week9/Day1 27-07-2026/Shallowcomparision'
+import Practice3 from '../../../week9/Day1 27-07-2026/Practice3'
+import Reausableusercard from '../../../week9/Day1 27-07-2026/Reausableusercard'
+import Reuseable from '../../../week9/Day1 27-07-2026/Reuseable'
+import Getfetchaxios from '../../../week9/Day1 27-07-2026/api calls/Getfetchaxios'
+import Post from '../../../week9/Day1 27-07-2026/api calls/Post'
+import Put from '../../../week9/Day1 27-07-2026/api calls/Put'
+import PatchFetch from '../../../week9/Day1 27-07-2026/api calls/PatchFetch'
 
 
 
@@ -33,10 +42,22 @@ function App() {
   return (
     <div>
 
+{/* <Withreactmemo/> */}
+{/* <Shallowcomparision/> */}
+{/* <Practice3/> */}
+{/* <Reuseable /> */}
+{/* <Getfetchaxios/> */}
+{/* <Post/> */}
+{/* <Put/> */}
+<PatchFetch/>
+
+
+
+
       {/* <PConditional/> */}
       {/* <Puseeffect/> */}
       {/* <Pdynamic/> */}
-      <Museeffect/>
+      {/* <Museeffect/> */}
 
 {/* <ProtectDashboard/> */}
 {/* <UserLoaded loading={true}/> */}
