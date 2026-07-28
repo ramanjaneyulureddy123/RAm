@@ -1,25 +1,22 @@
 import React, { useState } from 'react'
-import withAuth from '../../../week8/Day4 23-07-2026/withAuth'
 import Dashboard from '../../../week8/Day4 23-07-2026/Dashboard'
-import withLoad from '../../../week8/Day4 23-07-2026/withLoad'
-import User from '../../../week8/Day4 23-07-2026/User'
-import withAuthorization from '../../../week8/Day4 23-07-2026/withAuthorization'
-import Admin from '../../../week8/Day4 23-07-2026/Admin'
-import withSpinner from '../../../week8/Day4 23-07-2026/withSpinner'
-import Usespinner from '../../../week8/Day4 23-07-2026/Usespinner'
-import PConditional from '../../../week8/Day5 24-07-2026/PConditional'
-import Puseeffect from '../../../week8/Day5 24-07-2026/Puseeffect'
-import Pdynamic from '../../../week8/Day5 24-07-2026/Pdynamic'
-import Museeffect from '../../../week8/Day5 24-07-2026/practice/Museeffect'
-import Withreactmemo from '../../../week9/Day1 27-07-2026/Withreactmemo'
-import Shallowcomparision from '../../../week9/Day1 27-07-2026/Shallowcomparision'
-import Practice3 from '../../../week9/Day1 27-07-2026/Practice3'
-import Reausableusercard from '../../../week9/Day1 27-07-2026/Reausableusercard'
-import Reuseable from '../../../week9/Day1 27-07-2026/Reuseable'
-import Getfetchaxios from '../../../week9/Day1 27-07-2026/api calls/Getfetchaxios'
-import Post from '../../../week9/Day1 27-07-2026/api calls/Post'
-import Put from '../../../week9/Day1 27-07-2026/api calls/Put'
-import PatchFetch from '../../../week9/Day1 27-07-2026/api calls/PatchFetch'
+import Fragment from '../../../week9/Day2 28-07-2026/Fragment'
+import withHoc from '../../../week9/Day2 28-07-2026/withHoc'
+import UseHoc from '../../../week9/Day2 28-07-2026/UseHoc'
+import UseAuth from '../../../week9/Day2 28-07-2026/UseAuth'
+import withAuth from "../../../week9/Day2 28-07-2026/withAuth"
+import withLoad from '../../../week9/Day2 28-07-2026/withLoad'
+import Useload from '../../../week9/Day2 28-07-2026/Useload'
+import Counter from '../../../week9/Day2 28-07-2026/Counter'
+import UseCounter from '../../../week9/Day2 28-07-2026/UseCounter'
+import UsersF from '../../../week9/Day2 28-07-2026/UsersF'
+import LoginForm from '../../../week9/Day2 28-07-2026/implement/loginForm'
+import Theme from '../../../week9/Day2 28-07-2026/implement/Theme'
+import Window from '../../../week9/Day2 28-07-2026/implement/Window'
+import AnotherCounter from '../../../week9/Day2 28-07-2026/AnotherCounter'
+import withLoaddd from '../../../week9/Day2 28-07-2026/mini/withLoaddd'
+import UserList from '../../../week9/Day2 28-07-2026/mini/UserList'
+import UseCustom from '../../../week9/Day2 28-07-2026/mini/UseCustom'
 
 
 
@@ -39,20 +36,42 @@ function App() {
 
   // const [loading, setLoading] = useState(true);
 
+  // const HighOrder=withHoc(UseHoc)
+
+  // const Hocauth=withAuth(UseAuth)
+
+  // const USEload=withLoad(Useload)
+
+  // const user=[
+  //   {id:1, name:"naga"},
+  //   {id:2, name:"prashanth"}
+  // ]
+
+// mini 
+const Mini=withLoaddd(UserList)
+
+const {data, loading}=UseCustom("https://jsonplaceholder.typicode.com/users")
+  
   return (
     <div>
+      <h1>react application mini</h1>
+      <Mini  users={data}
+      loading={loading}/>
 
-{/* <Withreactmemo/> */}
-{/* <Shallowcomparision/> */}
-{/* <Practice3/> */}
-{/* <Reuseable /> */}
-{/* <Getfetchaxios/> */}
-{/* <Post/> */}
-{/* <Put/> */}
-<PatchFetch/>
+    
+{/* <HighOrder  name="Ram"/> */}
 
+{/* <Hocauth logStatus={true} name="anji"/> */}
 
+{/* <USEload loading={true}  users={user}/> */}
 
+{/* <UseCounter/> */}
+{/* <Counter/> */}
+{/* <UsersF/> */}
+{/* <LoginForm/> */}
+{/* <Theme/> */}
+{/* <Window/> */}
+{/* <AnotherCounter/> */}
 
       {/* <PConditional/> */}
       {/* <Puseeffect/> */}
