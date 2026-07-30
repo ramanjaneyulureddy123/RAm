@@ -35,6 +35,8 @@ const MemoChild=React.memo(Child)
 
 
 // first child  rendring --- button clcik evert time -- inc count no render 
+
+
 // function CallB() {
 //   const [count, setCount] = useState(0);
 
