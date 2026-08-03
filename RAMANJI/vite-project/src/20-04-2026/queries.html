@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Vertical */
+/* @media (orientation: portrait) {
+  body {
+    background-color: pink;
+  }
+}
+@media (orientation: landscape) {
+  body {
+    background-color: orange;
+  }
+} */
+ .main{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+ }
+@media (max-width:600px){
+    body{
+        background-color: red;
+    }
+     .main{
+        /* flex-direction: column; */
+    }
+}
+@media (min-width:601px){
+    body{
+        /* background-color: yellow; */
+    }
+    .main{
+        grid-template-columns: 1fr;
+
+    }
+}
+
+@media (aspect-ratio: 16/9){
+    body{
+        background-color: aqua;
+    }
+    
+}
+img {
+    opacity:0.5;
+}
+img:hover{
+    opacity:1;
+}
+    </style>
+</head>
+<div class="main">
+    <div>1</div>
+        <div>1</div>
+    <div>1</div>
+    <div>1</div>
+
+</div>
+<button>submit</button>
+<img src="../practice/image.html.webp">
+</body>
+</html>

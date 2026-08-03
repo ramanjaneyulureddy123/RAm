@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let map=new Map()
+        map.set("name","kiran")
+        map.set("sal","2200")
+        map.set(1,"number")
+        map.set(true, "boolean")
+
+
+        console.log(map)
+        console.log(map.size)
+        console.log(map.get("name"))
+        console.log(map.has("sal"))
+        map.delete("name")
+                console.log(map)
+map.clear()
+        console.log(map)
+// weak map 
+
+let weakmap=new WeakMap()
+let obj={name:"anji"};
+
+weakmap.set(obj,"weakend")
+console.log(weakmap.get(obj))
+console.log(weakmap.has(obj))
+weakmap.delete(obj)
+console.log(weakmap.has(obj))
+
+// set 
+let set =new Set()
+
+set.add(10)
+set.add(20)
+set.add(10)
+console.log(set)
+
+console.log(set.has(10))
+console.log(set.size)
+set.delete(10)
+console.log(set.has(10))
+set.clear()
+console.log(set)
+
+let arr=[1,2,3,3,4,4.5]
+ let unq=new Set(arr)
+
+ console.log(unq);
+
+ let names = ["Anji","Ram","Anji","Vijay"];
+let a= [...new Set (names)]
+console.log(a)
+
+// weakmap 
+let ws=new WeakSet()
+ let user={name:"raghu"}
+ let user1={age:20}
+ ws.add(user1)
+
+ console.log(ws.has(user1))
+
+ ws.delete(user1)
+  console.log(ws.has(user1))
+
+  function remove(arr){
+    return [...new Set(arr)]
+  }
+
+  console.log(remove([1,2,3,3,4,4,5,5]))
+
+
+
+            </script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button id="addBtn"> Add task</button>
+
+<div id="parent">
+
+<button id="child">
+Click
+</button>
+
+</div>
+
+<ul id="tasks"></ul>
+
+<p id="display"></p>
+    <script>
+const btn=document.getElementById("addBtn")
+btn.addEventListener("click",()=>{
+    console.log("button clicked")
+})
+// event bubling 
+parent.addEventListener("click",()=>{
+console.log("Parent")
+})
+
+child.addEventListener("click",()=>{
+console.log("Child")
+})
+
+// event capturing 
+parent.addEventListener("click",()=>{
+    console.log("parent capturing")
+},true)
+
+// event delegation 
+tasks.addEventListener("click",(e)=>{
+    if(e.target.classList.contain("delete")){
+        e.target.parentElement.remove()
+    }
+})
+
+// promises 
+function delay(){
+    return new Promise((resolve)=>{
+        setTimeout(()=>{
+            resolve(" promise done")
+        },2000)
+    })
+}
+delay()
+.then(data=>{
+    console.log(data)
+})
+
+// async /await 
+async function getData() {
+    try{
+        let response=await fetch("https://jsonplaceholder.typicode.com/users")
+let data=await response.json()
+display.textContent=data[0].name
+    }
+    catch(error){
+        console.log(error)
+    }
+}
+
+getData()
+// destructing 
+const task={
+name:"company",
+status:true
+}
+const {name,status}=task
+console.log(name)
+
+// iterator 
+const arr=[1,2,3]
+const iterator=arr[Symbol.iterator]()
+console.log(iterator.next())
+console.log(iterator.next())
+
+ function* ids(){
+let id=1
+while(true){
+yield id++
+}
+}
+let gen=ids()
+console.log(gen.next().value);
+
+console.log(gen.next().value)
+// local storage 
+localStorage.setItem("place","famous place")
+localStorage.getItem("place")
+// localStorage.removeItem('place')
+// localStorage.clear()
+
+sessionStorage.setItem("word","world")
+sessionStorage.getItem('world')
+ const namme=sessionStorage.getItem("word")
+ console.log(namme)
+//  sessionStorage.removeItem("word")
+
+try{
+let x=JSON.parse("{")
+}
+catch(error){
+console.log("Invalid JSON")
+}
+
+// git init --- intializes a new git repo in the current folder 
+// git add . --adds all changed files to staging area for the next comit 
+// git commit ---- saves the staged tolocal repo with a msg 
+// git pull --- downloads and merges the latest chnages from the remote repo into your local repo.
+
+// git Clone --- it downloads a complete projects from a remote repo to your system 
+// git log -- it shows all previous commite in the project
+// git show --- it shows  the chnages ina particluar commit ( what was you chnaged)
+// git branch -- used to create list or dlete branches in repo
+// git fetch-- used to download the latest changes from remote repo to your local repo
+// git merge--- used to combine chnages from one branch into anothe rbranch
+
+
+</script>
+</body>
+</html>

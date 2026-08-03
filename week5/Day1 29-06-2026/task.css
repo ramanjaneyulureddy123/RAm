@@ -1,0 +1,33 @@
+body{
+    background-color: grey;
+}
+/* element selector  */
+p{
+    color:green;
+}
+
+/* id selector  */
+#id{
+    background-color: lightblue;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 100px;
+    height: 5px;
+    padding:20px;
+    text-align: center;
+}
+/* class selector  */
+.class{
+ background-color: lightgray;
+    border: 2px dotted red;
+    border-radius: 10px;
+    width: 200px;
+    height: 5px;
+    padding:20px;
+    text-align: center;
+}
+/* group selector  */
+* {
+  margin: 0;
+  padding: 0;
+}

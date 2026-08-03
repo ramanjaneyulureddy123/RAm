@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="number">
+<button onclick="table()">Show Table</button>
+
+<div id="output"></div>
+
+    <!-- 11 question  -->
+<form onSubmit="return pass()">
+<label>Password</label>
+<input type="password " 
+id="password"
+pattern="?*./[A-Z]?*./[0-9]?*./[a-z].{8}">
+
+<button type="submit">submit</button>
+</form>
+    <script>
+
+        function table() {
+    let num = document.getElementById("number").value;
+    let result = "";
+
+    for(let i = 1; i <= 10; i++) {
+        result = result + num + " x " + i + " = " + (num * i) + "<br>";
+    }
+
+    document.getElementById("output").innerHTML = result;
+}
+       function pass(){
+                    let password=document.getElementById("password").value;
+
+if(password.length<8){
+                alert("passwod must be contain 8 characters 1 upper 1 lower ")
+                return false;
+            }
+       }
+
+
+    //    6 ques 
+
+       function countvowels(str){
+        let count=0
+        let vowels="aeiou" 
+        for (let i=0; i<str.length; i++){
+if (vowels.includes(str[i])){
+    count++;
+}
+        }
+        return count;
+       }
+console.log(countvowels("javaScript"))
+
+function remove (arr){
+    return {...new Set(arr)}
+}
+console.log(remove([10,20,30,10,20,30]))
+
+    </script>
+</body>
+</html>

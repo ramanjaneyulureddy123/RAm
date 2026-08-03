@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onClick="every()"> click</button>
+    <form>
+        <label>Name:</label>
+        <input type="name" name="Name" placeholder="enter the name" required/><br><br>
+        <label>Email:</label>
+        <input type="email" name="Email" required><br><br>
+        <label>Pasword</label>
+        <input type="password" minlength="8" required><br><br>
+        <label>Gender</label>
+        <input type="radio" name="gender" value="male" required>male
+        <input type="radio" name="gender" value="female" >female
+        <input type="radio" name="gender" value="others">others<br><br>
+        <label>Country:</label> 
+        <select name="country" required>
+            <option >select country</option>
+            <option>India</option>
+        <option>USA</option>
+        <option>UK</option>
+        <option>Canada</option>
+        </select><br><br>
+        <button type="submit">submit</button>
+    </form>
+   
+    <script >
+        let a="anji"
+        try{
+            console.log(a.toUpperCase())
+        }catch(error){
+        console.log("error",error.message)    
+        }
+
+        let age=17
+        try{
+            if(age<18){
+                throw new Error("age should greater than 18")
+            }
+            console.log("eligible")
+        }catch(error){
+            console.log(error.message)     
+           }finally{
+            console.log("done")
+           }
+
+async  function geting(){
+try{
+    let res=await fetch("https://jsonplaceholder.typicode.com/users")
+    let data=await res.json()
+    console.log(data)
+}
+catch(error){
+console.log("error")
+}
+}
+geting()
+
+function count(){
+    let clicks=0
+    return function(){
+        clicks++
+        console.log("button clicked",clicks)
+    }
+}
+let every=count()
+
+function p(){
+    return new Promise((resolve)=>{
+        setTimeout(()=>{
+            console.log("after 3 sec ")
+        },3000)
+    })
+}
+p()
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,96 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.whole{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding:30px;   
+    gap: 10px;
+}
+.whole a{
+    color:white;
+ text-decoration: none;
+}
+.whole a:hover{
+    color:yellow;
+}
+    </style>
+</head>
+<body>
+    <div class="whole">
+        <a href="#">HOME</a>
+        <a href="#">About</a>
+        <a href="#">services</a>
+        <a href="#">contact</a>
+
+    </div>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display:grid;
+            grid-template-areas:
+            "header header"
+            "sidebar main"
+            "footer footer";
+            grid-template-columns:200px 1fr;
+            min-height:100vh;
+        }
+        .header{
+            grid-area:header;
+            background-color:black;
+            color:white;
+            padding:20px;
+        }
+
+        .sidebar{
+            grid-area:sidebar;
+            background-color: lightblue;
+            padding:20px
+        }
+        .main{
+            grid-area:main;
+             background-color:lightgray;
+    padding:20px;
+        }
+        .footer{
+    grid-area:footer;
+    background-color:black;
+    color:white;
+    padding:20px;
+}
+@media(max-width:769px){
+    .container{
+        grid-template-areas:
+        "header"
+        "sidebar"
+        "main"
+        "footer";
+        grid-template-columns:1fr;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">header</div>
+         <div class="sidebar">sidebar</div>
+        <div class="main">main</div>
+        <div class="footer">footer</div>
+
+    </div>
+</body>
+</html>

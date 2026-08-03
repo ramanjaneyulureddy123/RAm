@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="clock"></h1>
+
+    <h1 id="watch">0</h1>
+    <button id="start" >start</button>
+    <button id="stop">stop</button>
+    <button id="reset">reset</button>
+    <script>
+        setTimeout(()=>{
+            console.log("it executes after 3 sec")
+        },3000)
+
+        // setInterval(()=>{
+        //     console.log("it's print every 2 sec")
+        // },2000)
+
+        // let id=setInterval(()=>{
+        //     let time =new Date()
+        //     console.log(time.toLocaleTimeString())
+        // },1000)
+
+        // setTimeout(()=>{
+        //     clearInterval(id)
+        //     console.log("clock stopped")
+        // },5000)
+
+        let count=5
+        let timer=setInterval(()=>{
+            console.log(count)
+            count--
+            if(count<0){
+                clearInterval(timer)
+                console.log("time is up ")
+            }
+        },1000)
+        // ---------------------------
+        setInterval(() => {
+    let time = new Date();
+
+    document.getElementById("clock").textContent =
+        time.toLocaleTimeString();
+
+}, 1000)
+
+// -----------------------------------------
+
+console.log("Red → Wait");
+setTimeout(() => {
+    console.log("Yellow → Ready")
+    setTimeout(() => {
+        console.log("Green → Go")
+    }, 2000)
+}, 3000)
+// -------------------------
+// clearTimeout 
+let t=setTimeout(()=>{
+    console.log("ram")
+})
+clearTimeout(t)
+// console.log("time cancelled")
+
+
+// stopwatch application 
+let seconds=0;
+let timerr;
+
+let watch=document.getElementById("watch")
+
+document.getElementById("start").onclick=function(){
+    timerr=setInterval(()=>{
+        seconds++
+        watch.textContent=seconds
+    },1000)
+}
+document.getElementById("stop").onclick=function(){
+    clearInterval(timerr)
+}
+document.getElementById("reset").onclick=function(){
+    clearInterval(timerr)
+    seconds=0
+    watch.textContent=seconds
+}
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="search"/>
+    <!-- <p id="output"></p> -->
+    <script>
+        let timer;
+        function handling(){
+            clearTimeout(timer)
+            timer=setTimeout(()=>{
+                console.log("function run ")
+                //  document.getElementById("output").innerText = "Searching...";
+            },500)
+        }
+        document.getElementById("search").addEventListener("input",handling)
+    </script>
+</body>
+</html>

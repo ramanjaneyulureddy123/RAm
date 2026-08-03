@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a=setInterval(()=>{
+            console.log("print")
+        },2000)
+
+        setTimeout(()=>{
+            clearInterval(a)
+        },12000)
+
+        function myfunction(callback){
+            setTimeout(()=>{
+                const data={name:"anji",age:22}
+                callback(data)
+            },3000)
+        }
+       myfunction((data)=>{
+        console.log(data)
+       })
+
+       function add(a){
+        return function(b){
+            return a-b;
+        }
+       }
+       console.log(add(5)(4))
+       function multiply(a) {
+  return function(b) {
+    return a * b;
+  };
+}
+
+const result=multiply(5)
+console.log(result(7))
+    </script>
+</body>
+</html>

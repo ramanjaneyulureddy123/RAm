@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* z-index  */
+.b {
+    width:100px;
+    height:100px;
+    position:absolute;
+}
+.red{
+    background-color: red;
+    top:100px;
+    left:100px;
+    z-index:2;
+
+}
+.blue{
+    background-color: blue;
+    top:80px;
+    left:80px;
+    z-index:1;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background: black;
+  color: white;
+}
+
+/* Layout - Grid */
+.container {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  padding: 10px;
+  gap: 10px;
+}
+
+/* Sidebar */
+.sidebar {
+  background: green;
+  padding: 10px;
+}
+
+/* Content */
+.content {
+  background: green;
+  padding: 10px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+  header {
+    flex-direction: column;
+  }
+}
+    </style>
+</head>
+<body>
+    <!-- z-index  -->
+ <div class=" b red"></div>
+<div class=" b blue"></div>
+
+<header>
+  <div>Logo</div>
+  <div>Menu</div>
+</header>
+
+<div class="container">
+  <div class="sidebar">Sidebar</div>
+  <div class="content">Main Content</div>
+</div>
+</body>
+</html>

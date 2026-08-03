@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="string()">Click</button>
+
+    <p id="value">anji</p>
+
+    <h1 id="color">hello</h1>
+
+<h1 id="bgcolor">red</h1>
+
+    <h2 id="text">please let me know</h2>
+
+    <p id="demo">Hello</p>
+
+    <p id="demo">Hello bye  </p>
+
+    <div id="a"></div>
+
+    <h1 id="believe">its my responbility</h1>
+
+    <button id="btn">Click</button>
+    <!-- it print in console -->
+     <input  id="care" type="text">
+     <!-- it print in ui -->
+<input id="nam" placeholder="ui print">
+<p id="ui"></p>
+
+<input type="text" id="namee" placeholder="Type something">
+
+<p id="outputt"></p>
+
+<div id="box" 
+style="width:200px;height:100px;border:1px solid black;">
+   Mouse ni ikkada pettu
+</div>
+<!-- -------------- -->
+
+<input id="input" placeholder="forms">
+<button id="but">submit</button>
+<p id="result"></p>
+    <script>
+
+    document.getElementById("but").addEventListener("click",function(){
+        let namm=document.getElementById("input").value;
+        if(namm===""){
+            document.getElementById("result").innerText="enter the name"
+        }else {
+            document.getElementById("result").innerText="hello"+namm
+        }
+    })
+// ------------------------
+        document.getElementById("box")
+.addEventListener("mouseover", function(){
+
+   document.getElementById("outputt").innerText =
+   "Mouse entered";
+});
+
+     document.getElementById("box")
+.addEventListener("mouseout", function(){
+
+   document.getElementById("outputt").innerText =
+   "Mouse left";
+});
+
+
+
+//    box.addEventListener("mouseout", function(){
+
+// document.getElementById("outputt")
+// .innerText = "Mouse Left";
+
+// });
+
+        document.getElementById("namee")
+.addEventListener("keydown", function(event){
+
+   document.getElementById("output").innerText =
+   "Key pressed: " + event.key;
+
+});
+
+        document.getElementById("nam").addEventListener("input",function (){
+            document.getElementById("ui").innerText=this.value
+        })
+document.getElementById("care").addEventListener("input", function (){
+    console.log(this.value)
+})
+
+        function string(){
+document.getElementById("value").innerText="vijay"
+        }
+
+document.getElementById("color").style.backgroundColor="blue"
+
+document.getElementById("bgcolor").style.color="green"
+
+document.getElementById("text").innerText="ok done"
+
+document.getElementById("demo").innerHTML = "<b>Hi Mike</b";
+
+    console.log(document.getElementById("demo").textContent);
+// create element 
+    let data=document.createElement("h6")
+    data.innerText="hello manager"
+    console.log(data)
+
+// adding element 
+    document.getElementById("a").appendChild(data)
+
+// remove 
+    document.getElementById("believe").remove()
+
+    document.getElementById("btn").addEventListener("click",function (){
+        alert("your are clicked this one")
+    })
+    </script>
+</body>
+</html>

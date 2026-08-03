@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let marks=[20,50,60,80]
+        let pass=marks.some(marks=>marks >=50)
+        console.log(pass)
+
+        let students = ["Arjun", "Bala", "Kiran"]
+let here= students.some(student=>student === "Kiran");
+console.log(here)
+
+        let mark = [20, 30, 40, 45]
+let hasPassed = mark.some(mark => mark >= 50);
+console.log(hasPassed)
+
+let m = [55, 65, 70, 80]
+let allPassed = marks.every(m=>m >= 50)
+console.log(allPassed)
+
+let ages = [20, 22, 25, 19]
+let allAdults = ages.every(age => age >= 18)
+console.log(allAdults)
+
+
+let score = [55, 65, 40, 80]
+let output = score.every(score=> score >= 50)
+console.log(output)
+
+let word=["html","css","javascript"]
+console.log(word.join("-"))
+
+let numbers = [1, 2, 3, 4];
+
+console.log(numbers.join(" "));
+
+let num=[100,29,40,60]
+num.sort((a,b)=>a-b)
+console.log(num)
+
+let numm=[1,3,4,5]
+numm.sort((a,b)=>b-a)
+console.log(numm)
+
+var a=["anji","vajun","sujay","balu","chetan"]
+console.log(a.sort())
+
+let number=[1,2,3,4]
+let doubled= number.map(num=>num *2)
+console.log(doubled)
+
+let m1 = [50, 60, 70]
+let updated = m1.map(mark => mark + 10)
+console.log(updated)
+
+let words=["html","css","javascript"]
+let shows=words.map(wordd =>wordd.toUpperCase())
+console.log(shows)
+
+let n=[1,2,3,4,5,6,8]
+let even= n.filter(num=>num % 2===0)
+console.log(even)
+
+let w=['abc','de',"react", "javascript"]
+let long=w.filter(w1=>w1.length>3)
+console.log(long)
+
+let sum=[10,20]
+let add=sum.reduce((a,b)=>a+b)
+console.log(add)
+
+let n1=[10,50,80,60]
+
+let max=n1.reduce((large,num)=>
+num>large?num:large)
+
+console.log(max)
+
+let fruits = ["Apple","Mango","Banana"]
+
+for (let i = 0; i < fruits.length; i++) {
+    console.log(fruits[i]);
+}
+
+let namm = ["Anji", "Manish", "Balu"];
+
+for (let names of namm) {
+    console.log(names);
+}
+
+let values=[1,2,3,4,5]
+
+values.forEach(function(value){
+console.log(value);
+})
+
+// remove  duplicates from aray 
+let numb = [1, 2, 2, 3, 4, 4, 5]
+let result=[...new Set(numb)]
+console.log(result)
+
+// without sort 
+let numbb=[10,5,100,40]
+
+for (let i=0; i<numbb.length; i++){
+    for (let j=i+1; j<numbb.length; j++){
+        if (numbb[i]>numbb[j]){
+            let temp=numbb[i]
+            numbb[i]=numbb[j];
+            numbb[j]=temp;
+        }
+    }
+}
+console.log(numbb)
+
+// object literal 
+let student = {
+    name:"Mike",
+    age:22,
+    course:"JavaScript"
+}
+console.log(student)
+console.log(student.name)
+console.log(student["course"])
+
+// constructor 
+function person(name,age){
+    this.name=name;
+    this.age=age;
+}
+let p1=new person("anji",22)
+let p2=new person ("vijay",30)
+
+console.log(p1)
+console.log(p2)
+
+// class 
+
+class employee{
+    constructor (name, id, role){
+        this.name=name;
+        this.id=id;
+        this.role=role;
+    }
+}
+
+let E1= new employee("veera",1,"soft")
+let E2= new employee("vilasha",2,"soft")
+
+console.log(E1)
+console.log(E2)
+
+// newkeyword 
+
+let a1=new Object()
+a1.name="eswar"
+a1.age=22
+console.log(a1)
+
+var object={
+    name:"naga",
+    age:22,
+    role:"soft"
+}
+
+console.log(object.role)
+console.log(object["age"])
+
+object.age=55
+console.log(object)
+
+object.city="kadapa"
+console.log(object)
+
+object["city"]="yerraguntla"
+console.log(object)
+
+delete object.age
+console.log(object)
+
+
+</script>
+</body>
+</html>

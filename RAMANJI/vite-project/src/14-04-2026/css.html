@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./external.css">
+    <style>
+
+        input:focus{
+            border:2px solid red;
+        outline:none;
+        }
+        #a1::before{
+            content: "note:";
+            color:red;
+            font-weight:bold;
+        }
+        button:active{
+            background-color: red;
+        }
+        p:first-child {
+            color:red;
+        }
+        p:last-child {
+            color:blue;
+        }
+         p:nth-child(2) {
+  color: pink;
+}
+input:checked {
+  color: blue;
+}
+p ::first-line {
+    color:yellow;
+    font-size:30px;
+}
+::selection {
+    color:red;
+    background-color: grey;
+}
+h2{
+    color:yellow;
+}
+    </style>
+</head>
+<body>
+    <h1 style="color:brown;">respect the our culture </h1>
+    <h2>dont forget our old culture</h2>
+    <h4>u need to remember</h4>
+    <h3>this is ramu nice to you</h3>
+    <h3>hello world</h3>
+    <input type="text" placeholder="enter the name">
+    <div>
+    <p id="a1">hello it is better to do </p>
+    <p>hi  man</p>
+    <p>vanakam</p>
+    </div>
+    <label>gender</label>
+    <input type="checkbox">male
+        <input type="checkbox">female
+
+    <button>submit</button>
+</body>
+
+</html>
+
+

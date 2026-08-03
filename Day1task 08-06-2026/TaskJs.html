@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // ternary operator  
+
+        let age= 3
+        // age> 18 ? console.log("adult"):console.log("minor")
+               let output= age> 18 ? "adult":"minor"
+               console.log(output)
+        
+        let num =2
+         num % 2==0 ? console.log("even"):console.log("odd")
+
+         let salary =14000
+         salary > 15000 ? console.log("project"): console.log("trainee")
+
+
+ let marks=85
+let grade=
+ marks >=90 ? "A" :
+ marks >=80 ? "B" :
+ marks >=75 ? "C" : "fail"
+
+ console.log(grade)
+
+ let ages= 14
+//  let result;
+
+ if (ages>=18){
+    console.log("eligible")
+ }else {
+    console.log("not eligible")
+ }
+
+ 
+ for ( let i=1; i<=10; i++){
+    console.log(i)
+ }
+
+ for(let day = 1; day <= 5; day++){
+    console.log("Day " + day + " - Present");
+}
+
+for (let odd=1; odd <=10; odd +=2){
+    console.log(odd)
+}
+
+for(let even = 2; even <= 10; even += 2){
+    console.log(even);
+}
+
+let fact = 1;
+
+for(let i = 1; i <= 5; i++){
+    fact *= i;
+}
+console.log(fact)
+
+let sum=0
+for (let i=1; i<=10; i++){
+    sum +=i
+}
+
+console.log(sum)
+
+let table =4
+for (let i=1; i<=10; i++){
+    console.log(table + "*" + i + "=" + (table *i))
+}
+
+let employee=["anji", "ramu", "kiran"]
+
+for ( let i=0; i<employee.length; i++){
+    console.log(employee[i])
+}
+    console.log("total employees:", employee.length)
+
+let j=0
+    while(j<=4){
+        console.log("Number", j)
+        j++;
+    }
+
+    let k=0;
+    let sums=0
+
+    while(k<=100){
+        sums += k;
+        k++;
+    }
+
+    console.log(sums)
+
+    let attempts=1
+    while(attempts<= 4){
+console.log(attempts)
+attempts++;
+    }
+
+    let i=10;
+
+    while (i >= 1){
+        console.log(i)
+        i--;
+    }
+
+ 
+    let facts=1
+     let f=1
+     while (f <=5){
+        facts  *= f;
+        f++
+     }
+     console.log(facts)
+
+     let seconds = 10;
+
+while(seconds > 0){
+    console.log(seconds);
+    seconds--;
+}
+
+console.log("Time Up!")
+
+
+const fruits = ["Apple", "Banana", "Mango"]
+
+for (const fruit of fruits) {
+    console.log(fruit)
+}
+
+let numbers=[10,20,30]
+for (let num of numbers){
+    console.log(num)
+}
+
+const numberr = [10, 20, 30, 40];
+let summ = 0;
+for (const num of numberr) {
+    summ += num;
+}
+
+console.log(summ)
+
+const name = "ANji"
+
+for (const nam of name) {
+    console.log(nam);
+}
+
+
+let rollno=[10,20,30,40,50]
+let largeno = rollno[0]
+
+for (const high of rollno){
+    if(high > largeno){
+        largeno = high
+    }
+}
+
+console.log(largeno)
+
+let m = 1;
+
+while (m <= 5) {
+    console.log(m);
+}
+
+
+    </script>
+</body>
+</html>

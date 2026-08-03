@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="one">it is get elements method</h1>
+    <h2 class="two">used to select html element based on their class name</h2>
+        <h2 class="two">class name</h2>
+
+        <p>this is very complicated</p>
+        <p>hello</p>
+
+        <p class="a">anji</p>
+                <p class="a">vijay</p>
+
+                <!-- <p class="demo">Hello</p> -->
+<p class="demo">World</p>
+<p class="demo">JavaScript</p>
+
+<input type="password" id="pass" placeholder="Enter password">
+
+<button onClick="toggle()">
+Show / Hide
+</button>
+
+</div>
+    <script>
+
+function toggle(){
+    let password=document.getElementById("pass")
+
+    if(password.type == "password"){
+        password.type="text"
+    }else{
+        password.type="password"
+    }
+}
+       
+
+
+console.log(document.getElementById("one"))
+
+let data=document.getElementsByClassName("two")
+console.log(data[0])
+console.log(data[1])
+
+
+let tag=document.getElementsByTagName("p")
+console.log(tag)
+
+let inform=document.querySelector(".a")
+console.log(inform)
+
+let sub=document.querySelectorAll(".demo")
+console.log(sub)
+    </script>
+</body>
+</html>

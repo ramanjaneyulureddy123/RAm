@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* .a{
+        display: flex;
+        /* justify-content: center;
+        /* align-items: center; */
+    /* }
+      .b{
+         display: flex; 
+        justify-content: center;
+        align-items:center ;
+        height: 200px;
+        background-color: aquamarine;
+      }    */
+      /* #container{
+display: flex;
+        width: 30%;
+        background-color: aqua;
+        margin:auto;
+        padding: 30px; 
+        justify-content: space-between;
+      }   */ 
+         *{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{ 
+    background-color:white;
+    font-family: Arial, sans-serif;
+}
+.main-container{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 20px;
+ }
+ .main{
+      display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 20px;
+
+ }
+         .page{
+    width:80%;
+    margin: 20px;
+    background: whitesmoke;
+    padding: 10px;
+}
+.logo,
+.nav,
+.header,
+.footer,
+.sidebar,
+.body{
+    background-color:gray;
+    padding: 15px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bold ;
+}
+.content{
+    display: flex;
+    gap: 10px;
+}
+.sidebar{
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.body{
+    width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+}
+.footer{
+margin-top: 10px;
+}
+.logo{
+    display: flex;
+    justify-content: flex-start;
+}
+/* ------------------------- */
+.web{
+    width:80%;
+    margin: 20px;
+    background: whitesmoke;
+    padding: 10px;
+    font-weight: bold;
+}
+.page2{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: gray;
+    margin: 10px;
+}
+.header2{
+    display: flex;
+    align-items: center ;
+    justify-content: center;
+    padding: 20px;
+    background-color: gray;
+    margin: 10px;
+    height: 100px;
+}
+.intro2{
+    display: flex;
+    align-items: center ;
+    justify-content: center;
+    height: 70px;
+    background-color: gray;
+    margin: 10px;
+}
+.body2{
+    display:flex ;
+    justify-content: space-around;
+    margin: 10px;
+}
+.box1,
+.box2,
+.box3{
+    background-color: gray;
+    width: 30%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer2{
+    background-color: gray;
+    height: 60px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* --------------------------------- */
+
+.page3{
+    width: 80%;
+    margin: 20px;
+    background: whitesmoke;
+    padding: 10px;
+}
+.logo3{
+    background: gray;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.content3{
+    display: flex;
+    margin-top: 10px;
+}
+.side3{
+    width: 30%;
+    background: white;
+    padding: 20px;
+    font-weight: bold;
+}
+.right3{
+    width: 70%;
+    margin-left: 10px;
+}
+.header3{
+    background: gray;
+    margin-top: 10px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+.body3{
+    background: gray;
+     margin-top: 10px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+.footer3{
+    background: gray;
+    padding: 15px;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+}
+/* --------------------------------------------------- */
+.page4{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: gray;
+    margin: 10px;
+}
+.boxes-l{
+    display:flex ;
+    justify-content: space-around;
+    margin: 10px;
+}
+.box1,
+.box2,
+.box3,
+.box4{
+     display:flex ;
+    justify-content: space-around;
+    margin: 10px;
+     background-color: gray;
+    width: 20%;
+    height: 70px;
+}
+.box5,
+.box6,
+.box7{
+    background-color: gray;
+    width: 20%;
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+}
+.box5,
+.box6,
+.box7{
+    background-color: gray;
+    width: 30%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer4{
+      background-color: gray;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 60px;
+      margin:20px;
+}
+</style>
+<body>
+    <!-- <div class="a">
+        <img  width="300px" height="155px" src="./photo.jpg.jpg">
+    </div>
+     <div class="b">
+        <p>1</p>
+        <p>1</p>
+        <p>1</p>
+    </div>
+<div id="container">
+    <div id="box">logo </div>
+    <div>navigation</div>
+</div> -->
+
+      <div class="main-container">
+    <!------layout-1------->
+     <div class="page">
+        <div class="logo">Logo</div>
+        <div class="nav">Navigation</div>
+        <div class="header">Header / Banner</div>
+        <div class="content">
+            <div class="sidebar">Side Bar</div>
+            <div class="body">Body Area</div>
+        </div>
+
+        <div class="footer">Footer</div>
+    </div>
+    <!---------layout-2---------->
+    <div class="web">
+    <div class="page2">
+        <div class="Logo2">Logo</div>
+        <div class="nav2">Navigation</div>
+    </div>
+    <div class="content2">
+    <div class="header2">Header / Banner</div>
+    <div class="intro2">IntroTextArea</div>
+    </div>
+    <div class="body2">
+        <div class="box1">Box 1</div>
+        <div class="box2">Box 2</div>
+        <div class="box3">Box 3</div>
+    </div>
+    <div class="footer2">Footer</div>
+    </div>
+    </div>
+    <div class="main">
+    <!----------layout-3--------->
+    <div class="page3">
+        <div class="logo3">Logo</div>
+        <div class="content3">
+            <div class="side3">Side bar <br>Navigation</div>
+            <div class="right3">
+                <div class="header3">Header / Banner</div>
+                <div class="body3">Body Area</div>
+            </div>
+        </div>
+        <div class="footer3">Footer</div>
+        </div>
+        <!----------layout-4--------->
+        <div class="web">
+    <div class="page4">
+        <div class="logo4">Logo</div>
+        <div class="nav4">Navigation</div>
+    </div>
+    <div class="boxes-l">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+    </div>
+     <div class="boxes-l">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+    </div>
+     <div class="boxes-l">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+    </div>
+     <div class="boxes-l">
+        <div class="box5">Box 1</div>
+        <div class="box6">Box 2</div>
+        <div class="box7">Box 3</div>
+    </div>
+    <div class="footer4">Footer</div>
+    </div>
+    </div>
+
+</body>
+</html>

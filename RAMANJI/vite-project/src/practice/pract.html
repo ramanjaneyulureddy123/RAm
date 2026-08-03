@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: grey;
+            padding: 20px;
+            margin: 0;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .whole{ 
+display: flex;
+justify-content: center; 
+gap: 30px;
+}
+        .card{
+            background-color: white;
+            padding:25px;
+            width:250px ;
+            border-radius:12px ;
+            transition: 0.3s;
+            box-shadow: 0 4px 10px pink;
+            text-align: center;
+        }
+        .card:hover{
+ transform:scale(1.1);
+ box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        .card.standard {
+  border: 2px solid red;
+  transform: scale(1.05);
+}
+.card h2 {
+  margin-bottom: 10px;
+}
+ul {
+    list-style: none;
+}
+ul li {
+    padding: 5px 0;
+
+}
+button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: none;
+  background: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+@media (max-width:768px) {
+    .whole{
+        flex-direction: column;
+        /* grid-template-columns: 1fr; */
+        align-items: center;
+    }
+    
+}
+@media (min-width:768px) and (max-width:1000px){
+    body{
+        /* flex-direction: column; */
+        /* align-items: center; */
+        background-color: red;
+    }
+    
+}
+
+    </style>
+</head>
+<body>
+    <div class="whole">
+        <div class="card">
+<h2>Basic</h2>
+<p> 300 per/month</p>
+<ul>
+    <li>100 msg</li>
+    <li>inlimited calls</li>
+    <li>2 GB data</li>
+</ul>
+<button>subsribe</button>
+        </div>
+             <div class=" card standard">
+<h2>Basic</h2>
+<p> 500 per/month</p>
+<ul>
+    <li>100 msg</li>
+    <li>inlimited calls</li>
+    <li>2 GB data</li>
+</ul>
+<button>subsribe</button>
+
+        </div>
+             <div class="card">
+<h2>Basic</h2>
+<p> 700 per/month</p>
+<ul>
+    <li>100 msg</li>
+    <li>inlimited calls</li>
+    <li>2 GB data</li>
+</ul>
+<button>subsribe</button>
+
+        </div>
+    </div>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+
+    <h2>Student Registration Form</h2>
+
+    <form>
+        <label for="name">Full Name:</label><br>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password"><br><br>
+
+        <label for="phone">Phone Number:</label><br>
+        <input type="tel" id="phone" name="phone"><br><br>
+
+        <label>Gender:</label><br>
+        <input type="radio" id="male" name="gender" value="Male">
+        <label for="male">Male</label>
+
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label><br><br>
+
+        <label>Courses:</label><br>
+        <input type="checkbox" id="html" name="course" value="HTML">
+        <label for="html">HTML</label>
+
+        <input type="checkbox" id="css" name="course" value="CSS">
+        <label for="css">CSS</label>
+
+        <input type="checkbox" id="js" name="course" value="JavaScript">
+        <label for="js">JavaScript</label><br><br>
+
+        <label for="city">City:</label><br>
+        <select id="city" name="city">
+            <option>Hyderabad</option>
+            <option>Vijayawada</option>
+            <option>Visakhapatnam</option>
+        </select><br><br>
+
+        <label for="address">Address:</label><br>
+        <textarea id="address" name="address" rows="4" cols="30"></textarea><br><br>
+
+        <input type="submit" value="Register">
+        <input type="reset" value="Clear">
+
+    </form>
+
+</body>
+</html> -->

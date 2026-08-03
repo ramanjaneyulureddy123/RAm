@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            background-color: red !important;
+        }
+        .two{
+            background-color: yellow;
+        }
+        #one{
+            background-color: blue;
+        }
+
+        .container{
+            display:flex;
+            justify-content: center;
+            align-items:center;
+            height:100vh;
+            gap:20px;
+        }
+        .card{
+            background-color: pink;
+            padding:20px;
+        }
+
+        .grid-container{
+            display:grid;
+            place-items:center;
+            grid-template-columns:repeat(4, 1fr);
+
+        }
+
+        .cards{
+            margin:10px;
+            background-color: green;
+            color:white;
+            padding:20px;
+        }
+
+#title{
+    color:red;
+    color:white;
+}
+.highlight{
+    color:blue
+}
+p{
+    color:aqua
+}
+div p{
+    color:blueviolet
+}
+
+.box {
+  width: 200px;         
+  height: 100px;         
+  
+  padding: 20px;         
+  border: 5px solid blue;
+  margin: 30px;   
+}
+
+.block{
+    background-color: pink;
+}
+.inline{
+    background-color: red;
+}
+.inline-block{
+    background-color: aqua;
+}
+.hide{
+    display:none;
+}
+
+.containe {
+  display: flex;             
+  justify-content: center;    
+  align-items: center;       
+  gap: 10px;                  
+
+  height: 200px;
+  background: #f0f0f0;
+}
+
+.relative{
+    position:relative;
+    width:300px;
+    height:150px;
+    background-color: lightgray;
+    margin:20px;
+    padding:10px;
+}
+
+.absolute{
+    position:absolute;
+    bottom:20px;
+    right: 20px;
+    background: red;
+  color: white;
+  padding: 5px;
+
+}
+.fixed{
+    position: fixed;
+    bottom:40px;
+    right:40px;
+    background-color: green;
+    color:white;
+    padding:20px;
+}
+
+.scroll{
+    position:sticky;
+    top:0;
+    background-color: orange;
+    padding:10px;
+}
+
+.content {
+  margin: 20px;
+}
+
+.contain{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:20px;
+    padding: 20px;
+}
+.boxx{
+    background-color: brown;
+    color:white;
+    text-align: center;
+    
+}
+    </style>
+</head>
+<body>
+    <h1 id="one" class="two" style="background-color: blueviolet ;">welcome to manttalayam place</h1>
+
+    <div class="container">
+        <div class="card">card1 </div>
+        <div class="card">card2 </div>
+        <div class="card">card3 </div>
+        <div class="card">card4 </div>
+
+    </div>
+
+    <div class=" grid-container">
+        <div class="cards">card1 </div>
+        <div class="cards">card2 </div>
+        <div class="cards">card3 </div>
+        <div class="cards">card4 </div>
+    </div>
+
+     <h1 id="title">CSS Selectors</h1>
+
+  <p>This is a normal paragraph.</p>
+
+  <p class="highlight">This paragraph has a class.</p>
+
+  <div class="card">
+    <p>Inside a card div</p>
+    </div>
+
+     <div class="box">
+    Box Model Example
+  </div>
+  </div>
+
+    <h2>Display Property Demo</h2>
+  <div class="block">I am block</div>
+  <span class="inline">I am inline</span>
+  <span class="inline-block">I am inline too</span>
+  <p class="hide">You cannot see me</p>
+
+
+   <div class="containe">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+  </div>
+
+   <div class="contain">
+    <div class="boxx">1</div>
+    <div class="boxx">2</div>
+    <div class="boxx">3</div>
+     <div class="boxx">4</div>
+    <div class="boxx">5</div>
+    <div class="boxx">6</div>
+  </div>
+
+  <div class="relative">
+    Relative Box
+    <div class="absolute">Absolute</div>
+  </div>
+
+  <div class="fixed">Fixed</div>
+
+   
+  <div class="scroll">
+    scroling....
+  </div>
+  <div class="content">
+    Scroll down to see sticky effect
+  </div>
+  <div style="height:1000px;"></div>
+</body>
+</html>

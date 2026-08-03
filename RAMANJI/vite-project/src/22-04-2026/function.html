@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="myButton">submit</button>
+    <script>
+        document.getElementById("myButton").addEventListener("click", function () {
+    console.log("Button clicked!");
+});
+        function name(name){
+            console.log("hi man "+ name)
+        }
+        name("how are you")
+                console.log(add(1,2))
+
+        function add(a,b){
+            return a+b;
+        }
+        let fun= function(){
+            // console.log("are u married")
+            return "hai"
+        }
+        console.log(fun())
+
+        let adds= function sum(a,b){
+            return a*b;
+        }
+        console.log(adds(6,6))
+        // console.log(x)
+
+        const x=10
+        console.log(x)
+
+        function call(name,callback){
+            console.log("hi"+name)
+            callback();
+        }
+            function say(){
+                console.log("hai")
+            
+        }
+call("safi",say)
+
+const a1=()=>{
+    console.log("pkl")
+}
+a1()
+function hi(name='sir'){
+    console.log('hello'+name)
+}
+hi();
+(()=> {
+    console.log("Hello Reddy");
+})();
+(function(){
+    let X=20
+    console.log(x);
+})();
+    
+    </script>
+</body>
+</html>

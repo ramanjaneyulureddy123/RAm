@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function reverse(sentence){
+    return sentence.split("").reverse().join("")
+}
+console.log(reverse("ramanjaneyulu reddy"))
+
+function hello(string){
+    let reverse=""
+    for (let i=string.length-1; i>=0;i--){
+    reverse +=string[i]
+}
+return reverse 
+}
+console.log(hello("anji"))
+
+function pa(str){
+    let p=str.split('').reverse().join('')
+    if(p==str){
+        console.log("it is ")
+    }else{
+        console.log("not a ")
+    }
+}
+pa("11211")
+
+let num=[1,2,3]
+let k= num[Symbol.iterator]()
+console.log(k.next())
+console.log(k.next())
+
+console.log(k.next())
+console.log(k.next())
+
+let string="hello"
+let m=string[Symbol.iterator]()
+console.log(m.next())
+console.log(m.next())
+console.log(m.next())
+console.log(m.next())
+console.log(m.next())
+console.log(m.next())
+console.log(m.next())
+
+function findlargest(arr){
+    let max=arr[0]
+    for (let i=1; i<arr.length; i++){
+        if(arr[i]>max){
+            max=arr[i]
+        }
+    }
+    return max;
+
+}
+console.log(findlargest([10,30,5,8,9]))
+
+    </script>
+</body>
+</html>

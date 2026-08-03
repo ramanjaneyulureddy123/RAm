@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log("hello sir")
+        setTimeout(()=>{
+            console.log("exectued")
+        },1000)
+        console.log("hello madam")
+
+        let a=setInterval(()=>{
+            console.log("set interval")
+        },2000)
+
+setTimeout(()=>{
+    clearInterval(a)
+},5000)
+
+let id=setTimeout(()=>{
+    console.log("cleartimout")
+},3000)
+clearInterval(id)
+
+
+
+console.log("A");
+
+setTimeout(() => {
+  console.log("B");
+}, 2000);
+
+setTimeout(() => {
+  console.log("C");
+}, 0);
+
+console.log("D");
+
+setTimeout(()=>{
+    console.log("hello")
+},4000)
+
+    </script>
+</body>
+</html>

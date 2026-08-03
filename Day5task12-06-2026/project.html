@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // IIFE
+        (function(){
+            console.log("students details")
+        })()
+
+        // Array creation 
+        let students=[
+            {name:"anji",score:85},
+            {name:"ramu",score:98},
+            {name:"krishna" ,score:67}
+        ]
+
+        function showStudents(list){
+            console.log("list of students")
+        
+
+        list.forEach((student,index)=>{
+            console.log(` ${index +1}.${student.name}-${student.score}`)
+        })
+}
+
+showStudents(students)
+
+// ternary operator 
+function checkScore(score){
+    return score >=75 ? "pass":"fail";
+}
+
+console.log("anji",checkScore(85))
+console.log("krishna",checkScore(67))
+
+// array searching 
+
+function find(name){
+    return students.find(student =>student.name ===name)
+}
+
+console.log(find("anji"))
+
+// scope 
+let a="global"
+
+function scope(){
+    let b="local"
+    console.log(a)
+    console.log(b)
+}
+    // console.log()
+
+scope()
+
+// recursion 
+function count(n){
+    if(n===0){
+        console.log("ok")
+        return
+    }
+console.log(n)
+count(n-1)
+}
+
+count(3)
+
+// closure 
+function counter(){
+    let count=0
+    return function (){
+        count++
+        console.log(count)
+    }
+}
+
+const inc=counter()
+inc()
+inc()
+
+// this keyword 
+
+const studentObj={
+    name:"madhu",
+    score:88,
+    show :function (){
+        console.log(` ${this.name} scored ${this.score}`)
+    }
+}
+
+studentObj.show()
+
+const newStudent ={
+    name :"nagendra",
+    score:90
+}
+let data=studentObj.show.bind(newStudent)
+data()
+
+
+for (let i=0; i<students.length; i++){
+    console.log(students[i].name)
+}
+// push 
+students.push({
+    name:"safi",
+    score:89
+})
+console.log(students)
+// pop 
+students.pop()
+console.log(students)
+    </script>
+</body>
+</html>

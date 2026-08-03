@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            text-align: center;
+            padding:40px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+
+        }
+        .card{
+            /* display: grid; */
+            padding:20px;
+            border: 1px solid black;
+            border-radius:10px;
+             transition: 0.3s; 
+        }
+        .card:hover{
+            transform: translateY(-20px);
+             box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        @media (max-width: 768px){
+            .container{
+            grid-template-columns: 1fr;
+        }
+    }
+    @media (min-width:769px) and (max-width:850px){
+        .container{
+grid-template-columns:repeat(4, 1fr);
+        }
+    }
+    /* @media (min-width: 851px){
+  .container{
+    grid-template-columns: repeat(2, 1fr);
+  }
+} */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div>phone</div>
+            <h3>this is product</h3>
+            <p>100</p>
+        </div>
+        <div class="card">
+            <div>phone</div>
+            <h3>this is product</h3>
+            <p>100</p>
+        </div>
+        <div class="card">
+            <div>phone</div>
+            <h3>this is product</h3>
+            <p>100</p>
+        </div>
+        <div class="card">
+            <div>phone</div>
+            <h3>this is product</h3>
+            <p>100</p>
+        </div>
+    </div>
+</body>
+</html>

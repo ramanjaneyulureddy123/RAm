@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    const promise= new Promise((resolve,reject)=>{
+        let success=true;
+        if (success){
+            console.log("successful")
+        }else {
+            console.log("failed")
+        }
+
+    })
+    let a= Promise.resolve("promise 1 success")
+        let b= Promise.resolve("promise 2 success")
+
+        Promise.all([a,b])
+        .then((out)=>{
+            console.log(out)
+        })
+        .catch((error)=>{
+            console.log(error)
+        })
+
+        let c=Promise.resolve("1 success")
+        let d=Promise.reject("2 failed")
+        Promise.all([c,d])
+        .then((result)=>{
+            console.log("success is fast ")
+        })
+        .catch((err)=>{
+            console.log("error")
+        })
+
+    
+        let c1=Promise.resolve("1 success")
+        let d1=Promise.resolve("2 failed")
+        Promise.allSettled([c1,d1])
+        .then(f=>{
+            console.log(f)
+        })
+
+
+        let a1=new Promise((resolve)=>{
+            setTimeout(()=>{
+                resolve(" task 1")
+            },1000)
+        })
+
+        let b1=new Promise((reject)=>{
+            setTimeout(()=>{
+                reject("task 2")
+            },2000)
+        })
+
+        Promise.race([a1,b1])
+        .then(success=>{
+            console.log(success)
+        })
+
+        .catch(e=>{
+            console.log(e)
+        })
+
+        let p1=Promise.reject("error 1")
+         let p2=Promise.reject("success first")
+        //  let p3=Promise.resolve("sucess 2")
+
+         Promise.any([p1,p2])
+         .then(s=>{
+            console.log(s)
+         })
+         .catch(e=>{
+            console.log(e)
+         })
+
+         let original={name:"don", age:22}
+         let copy=original
+         copy.name="vijay"
+         console.log(copy)
+         console.log(original)
+// shallow copy 
+         let object={name:"raja", sal:120, address:{aim:"police"}}
+         let copyobj={...object}
+
+         copyobj.name="ramanjanryulu REDDY"
+         copyobj.address.aim ="engineer "
+
+         console.log(copyobj)
+         console.log(object)
+// deep copy 
+let obj1 = {
+  name: "Mike",
+  address: { city: "Hyderabad" }
+};
+let obj2=JSON.parse(JSON.stringify(obj1))
+ obj2.address.city="goa"
+
+ console.log(obj2.address.city)
+  console.log(obj1.address.city)
+// normal array copy
+let array=[1,2,3]
+let copys=array
+array[3]=4
+console.log(array)
+//  shallow 
+
+let arr=[10,20,30]
+
+let copi=[...arr]
+// console.log(copi)
+console.log(copi)
+console.log(arr)
+
+let ar=[1,2,[10,20]]
+let ar1=[...ar]
+
+ar1[2][0]=30
+
+console.log(ar1)
+console.log(ar)
+// deep copy 
+let orig=[100,200,300]
+let copp=JSON.parse(JSON.stringify(orig))
+
+copp[0]=200
+
+console.log(copp)
+console.log(orig)
+
+let object1={name:"anji"}
+let object2={age:20}
+
+let result=Object.assign({},object1, object2)
+console.log(result)
+
+
+    </script>
+</body>
+</html>

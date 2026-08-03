@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr=[1,2,3,"hello", true,0.9,null,[1,2,3,[12,45]]]
+        console.log(arr)
+
+let ar = [10, 20, 30, 40];
+console.log(ar[0]);        
+console.log(ar[2]);        
+
+console.log(ar[3]);    
+
+let array=[10,20,30,40]
+// adding Element
+array.push(50)
+console.log(array)
+// remove last 
+array.pop()
+console.log(array)
+
+array.unshift(0)
+console.log(array)
+
+array.shift()
+console.log(array)
+
+array.splice(0,0,"Gold")
+console.log(array)
+
+array.splice(5,0,"Gold")
+console.log(array)
+let a=[2,3,4,5,5,6]
+let result=a.slice(2)
+console.log(result)
+
+let arra = [20,10,10, 20, 30, 40];
+console.log(arra)
+console.log(arra.indexOf(100))
+
+console.log(arra.includes(200))
+console.log(arra.includes(20))
+
+console.log(arra.lastIndexOf(10))
+
+
+        let num=[1,2,3]
+        let k=num[Symbol.iterator]()
+        console.log(k.next())
+        console.log(k.next())
+        console.log(k.next())
+        console.log(k.next())
+
+        let arr1 = [1, 2, 3];
+for (let value of arr1) {
+  console.log(value);
+}
+
+        function* demo(){
+            yield "hi"
+            yield "hello"
+        }
+        const generator=demo()
+        console.log(generator.next())
+                console.log(generator.next())
+        console.log(generator.next())
+        console.log(generator.next())
+         for(let some of demo()){
+            console.log(some)
+         }
+
+    </script>
+</body>
+</html>

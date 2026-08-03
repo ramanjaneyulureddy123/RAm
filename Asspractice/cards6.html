@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- <head> -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- <style> -->
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+/* Section */
+.services {
+  padding: 40px;
+  text-align: center;
+}
+
+/* Grid Layout */
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Card */
+.card {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+/* Icon */
+.icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+/* Hover Effect */
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Responsive (Mobile) */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<section class="services">
+  <h2>Our Services</h2>
+
+  <div class="container">
+
+    <div class="card">
+      <div class="icon">💻</div>
+      <h3>Web Development</h3>
+      <p>We build responsive websites.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">📱</div>
+      <h3>App Development</h3>
+      <p>Mobile apps for Android & iOS.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🎨</div>
+      <h3>UI Design</h3>
+      <p>Creative and modern designs.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">⚙️</div>
+      <h3>Backend</h3>
+      <p>Powerful server-side solutions.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">☁️</div>
+      <h3>Cloud</h3>
+      <p>Cloud deployment services.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🔒</div>
+      <h3>Security</h3>
+      <p>Secure and safe applications.</p>
+    </div>
+
+  </div>
+</section>
+
+</body>
+</html>

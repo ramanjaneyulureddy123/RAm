@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="search" placeholder="Search name">
+
+    <ul id="list"></ul>
+    <script>
+  let age=22
+  let price=99.98
+  console.log(typeof(price))
+
+  let name="kali"
+  let sal=`2000`
+    console.log(typeof(name))
+  console.log(typeof(sal))
+
+  let isloggin=false
+    console.log(typeof(isloggin))
+
+    let x
+    console.log(x)
+
+    let data =null
+    console.log(data)
+      console.log(typeof(data))
+
+      let bigint=12345678987765n
+        console.log(typeof(bigint))
+
+let s=Symbol("id unique")
+let s1=Symbol("name")
+console.log(s==s1)
+console.log(s)
+console.log(typeof(s))
+
+let object ={company:"govt company", sal:20000}
+console.log(object)
+console.log(typeof(object))
+
+var array=[10,20, 30,40]
+console.log(array)
+console.log(typeof(array))
+console.log(Array.isArray(array))
+
+function names(){
+    return "hello"
+}
+
+console.log(names())
+
+let arr=[1,[2,[3,4]],5,6]
+let result=arr.flat(1)
+console.log(result)
+
+
+let arr1=[1,[2,[3,[4,[5,[6]]]]]]
+let res=arr1.flat(Infinity)
+console.log(res)
+
+function flatten (arr){
+    let result=[]
+    for (let value of arr){
+        if (Array.isArray(value)){
+            result=result.concat(flatten(value))
+        }
+        else{
+            result.push(value)
+        }
+    }
+        return result;
+}
+let dat=[10,[20,30,[40]]]
+console.log(flatten(dat))
+
+
+// let users = ["Ram", "Raju", "Sam", "Ravi", "John"];
+//         let searchInput = document.getElementById("search");
+//         let list = document.getElementById("list");
+//         function displayData(data){
+//             list.innerHTML = "";
+//             data.forEach((item)=>{
+//                 let li = document.createElement("li");
+//                 li.textContent = item;
+//                 list.appendChild(li);
+//             });
+//         }
+//         displayData(users);
+//         searchInput.addEventListener("input", function(){
+//             let value = searchInput.value.toLowerCase();
+//             let filteredData = users.filter((item)=>{
+//                 return item.toLowerCase().includes(value);
+//             });
+//             displayData(filteredData);
+//         });
+
+        let users=["ram", "Anji", "Prashanth", "praven","anu"]
+
+        let searchinput=document.getElementById("search")
+        let list=document.getElementById("list")
+
+        function display(data){
+list.innerHTML="";
+data.forEach((item)=>{
+    let li= document.createElement("li");
+    li.textContent=item;
+    list.appendChild(li)
+})
+        }
+        display(users)
+
+        searchinput.addEventListener("input", function (){
+            let value=searchinput.value.toLowerCase();
+            let filterData=users.filter((item)=>{
+                return item.toLowerCase().includes(value);
+            })
+            display(filterData)
+        })
+    </script>
+  
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display:flex;
+            /* flex-direction: column; */
+            /* flex-direction: row-reverse; */
+            /* flex-direction: column-reverse; */
+            background-color: red;
+        }
+        .box{
+            background-color: aqua;
+            width: 100px;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+        }
+        .contain{
+            display: flex;
+      flex-wrap: wrap;
+      /* flex-wrap: wrap-reverse; */
+       /* width: 200px; */
+      border: 2px solid black;
+        }
+         .c {
+            display: flex;
+            justify-content: center;
+            /* justify-content: flex-end; */
+            /* justify-content: space-around; */
+            /* justify-content: space-between; */
+            justify-content: space-evenly;
+         }
+         .cont{
+            display: flex;
+            /* justify-content: center; */
+            /* align-items: center; */
+            /* align-items: flex-end; */
+            align-items: stretch;
+            background-color: yellow;
+            /* padding: 70px; */
+            height: 200px;
+         }
+         .b{
+            width: 50px;
+            height: 50px;
+            background: blue;
+            margin: 10px;
+            text-align: center;
+           
+         }
+         @media (max-width:600px){
+            .container {
+                flex-direction: column;
+            }
+            .c{
+                flex-direction: column;
+
+            }
+         }
+         
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+</div>
+<div class="c">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+</div>
+<div class="cont">
+    <div class="b">1</div>
+    <div class="b">2</div>
+    <div class="b">3</div>
+    <div class="b">4</div>
+</div>
+<div class="contain">
+  <div class="box">1</div>
+  <div class="box">2</div>
+  <div class="box">3</div>
+  <div class="box">4</div>
+  <div class="box">5</div>
+  <div class="box">6</div>
+   <div class="box">7</div>
+    <div class="box">8</div>
+    <div class="box">9</div>
+    <div class="box">10</div> <div class="box">11</div>
+    <div class="box">12</div>
+    <div class="box">13</div>
+    <div class="box">14</div>
+</div>
+
+</body>
+</html>

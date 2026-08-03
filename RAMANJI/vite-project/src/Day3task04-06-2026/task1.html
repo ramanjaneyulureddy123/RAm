@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+    <h1>Signup form</h1>
+    <form onSubmit=" return valiadateform()">
+    <label >Name: </label>
+    <input type="text"placeholder="enter the name" id="name" ><br><br>
+    <label>Email: </label>
+    <input type="email" placeholder="enter the email" id="email" ><br><br>
+    <label >Password:</label>
+    <input type="password" placeholder="enter password" id="password">
+    <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function valiadateform(){
+            let name=document.getElementById("name").value;
+            let email=document.getElementById("email").value;
+            let password=document.getElementById("password").value;
+
+            if(name== ""){
+                alert("name must be filled")
+                return false;
+            }
+            if(!email.includes("@")){
+                alert("email must contain @")
+                return false;
+            }
+            if(password.length<8){
+                alert("passwod must be contain 8 characters")
+                return false;
+            }
+            alert("successfully submiteed")
+            return true;
+        }
+
+        // ------------------------------------------------------
+        var name = "Mike";
+var age = 25;
+
+console.log(name);
+console.log(age);
+
+var name="kiran"
+console.log(name)
+
+let city="kadapa"
+city="vizag"
+console.log(city)
+
+const country="India";
+
+console.log(country);
+
+// --------------------------------------------
+// primitive data types
+let nam="Mike";
+console.log(nam);
+console.log(typeof nam);
+
+let ages = 22;
+let salary = 2554.55
+
+console.log(ages)
+console.log(salary)
+console.log(typeof ages)
+
+let a =true;
+
+console.log(a)
+console.log(typeof a)
+
+let month
+
+console.log(month)
+console.log(typeof month)
+
+let data = null
+
+console.log(data)
+console.log(typeof data)
+
+let bigNumber = 123456789012367890n;
+
+console.log(bigNumber);
+console.log(typeof bigNumber);
+
+let id = Symbol("userId");
+
+console.log(id);
+console.log(typeof id);
+// -----------------------------------------
+let role = "software"
+let agee = 25;
+let x = true;
+let sal = null;
+let department;
+let big=9876543234566667n
+
+console.log(typeof role);      
+console.log(typeof agee);       
+console.log(typeof x); 
+console.log(typeof sal);    
+console.log(typeof department);  
+console.log(typeof big) 
+
+let z=Symbol("id")
+console.log(typeof z)
+
+let arr = [10, 20, 30]
+console.log(typeof arr)
+console.log(Array.isArray(arr))
+
+let person = {
+    name: "Mike",
+    age: 25
+}
+console.log(typeof person)
+
+function greet() {
+    console.log("Hello")
+}
+
+console.log(typeof greet)
+
+
+     let object={
+    name:"raju",
+    age:22,
+    city:"kadapa",
+    address:{
+        street:"main street"    }
+}
+
+console.log(object)
+console.log(object.name)
+console.log(object.address.street)
+
+const numbers=[1,2,3,4,5,[10,20,30,]]
+console.log(numbers)
+console.log(numbers[0])
+console.log(numbers[5][1])
+
+function add(a,b){
+    return a+b;
+}
+console.log(add(3,4))
+
+function greet(name){
+    console.log("hello " + name)
+}
+greet("uday")
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height:100vh;
+        }
+        .btn{
+            background-color: pink;
+            padding: 20px 25px;
+            color: white;
+            transform:translateX(0) ;
+            transition: 2s;
+        }
+        .btn:hover{
+            background: yellow;
+            /* transform:translateY(50px) ; */
+            /* transform:scaleY(1.5); */
+                        /* transform:scaleX(1.5); */
+                        /* transform:rotateX(60deg); */
+                    transform:rotate(60deg) scale(2);
+        }
+        .box{
+    width: 100px;
+    height: 100px;
+    background: red;
+    /* transform: rotateX(40deg); */
+}
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <button class="btn">submit</button>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.box{
+    width: 100px;
+    height: 100px;
+    background: blue;
+    /* animation: spin 2s linear infinite; */
+      transform: skew(-20deg);
+}
+
+/* @keyframes spin {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+} */
+</style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

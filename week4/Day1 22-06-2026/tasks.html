@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{height:2000px}
+    </style>
+</head>
+<body>
+    <input type="text" id="search" placeholder="Search...">
+    <script>
+
+function debounce(fn,delay){
+  let timer 
+  return function (...args){
+    clearTimeout(timer)
+    timer=setTimeout(()=>{
+        fn.apply(this,args)
+    },delay)
+  }
+}
+ function search(e){
+    console.log("searching for:" ,e.target.value)
+ }
+
+ const debouncesearch=debounce(search,500)
+
+ document.getElementById("search").addEventListener("input",debouncesearch)
+
+ function throttling(fn,delay){
+    let lastcall=0
+    return function(){
+        let now=Date.now()
+        if(now-lastcall >=delay){
+            fn()
+            lastcall=now
+        }
+    }
+ }
+
+ function scrolling(){
+    console.log("scrollling...")
+ }
+
+ const throttlescroll=throttling(scrolling,500)
+
+ window.addEventListener("scroll",throttlescroll)
+
+ function name(callback){
+    callback()
+ }
+ function sayhello(){
+    console.log("hello")
+ }
+  name(sayhello)
+
+//  simulating data fetching 
+
+function fetch(callback){
+setTimeout(()=>{
+    let data=["html","css","js"]
+    callback(data)
+},2000)
+}
+function display(data){
+    console.log(data)
+}
+
+fetch(display)
+
+function validate(user,callback){
+    if(user.length >=3){
+        callback("valid")
+    }else{
+        callback("invalid")
+    }
+}
+validate("anji",(msg)=>{
+    console.log(msg)
+})
+
+let promise=new Promise((resolve,reject)=>{
+    let success=true
+    if(success){
+        resolve("task complte")
+    }else{
+        reject("task failed")
+    }
+})
+
+promise.then((msg)=>{
+    console.log(msg)
+})
+.catch((error)=>{
+    console.log(error)
+})
+
+function fetchData(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            resolve("data received")
+        },2000)
+    })
+}
+
+fetchData()
+.then((data)=>{
+    console.log(data)
+})
+.catch((error)=>{
+    console.log(error)
+})
+
+    </script>
+</body>
+</html>

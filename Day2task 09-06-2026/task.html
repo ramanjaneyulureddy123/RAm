@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function sum(...numbers){
+           console.log(numbers)
+        }
+
+    sum(10,20,30)
+
+    function memebers(name, ...score){
+        console.log("name:",name)
+        console.log("Score:",score)
+    }
+
+    memebers("anji",20,30,30)
+
+    function fun(...input){
+        let sum=0
+        for (let i of input){
+            sum +=i
+        }
+        return sum
+    }
+
+    console.log(fun(2,3,4))
+
+    function hello(a=10,b,c,d,e,...f){
+        console.log(a,b,c,d)
+    }
+    hello(undefined,2,3,4,5,6,7)
+
+    // arguments 
+
+    function show(number){
+        console.log(number)
+    }
+
+    show(10,20,30,40)
+
+    function shows(){
+        console.log(arguments)
+    }
+
+    shows(10,20,30,40)
+
+    // function declaration
+    // it is the process of defining a function keyword with a specific name and logic allow it to be reused block of code 
+    function great(name){
+        console.log('hello '+ name)
+    }
+
+    great("vijay")
+
+    // named function 
+
+    function named(){
+        console.log("named function")
+    }
+
+    named()
+
+
+console.log(sum(10,20))
+    function sum(a,b){
+        return a+b;
+    }
+    
+    // anonymous function 
+
+    const variable =function name(){
+        console.log("this is a anonymous function")
+    }
+    variable()
+
+    const add = function(a, b) {
+    return a + b;
+}
+
+console.log(add(20,30))
+
+// arrow  
+
+const arrow=()=>{
+    console.log('arrow function')
+}
+arrow()
+
+const sub=(a,b)=>{
+console.log(a-b)
+}   
+sub(20,10)
+
+const mul=(b,c)=> b*c
+
+console.log(mul(3,4))
+
+function print(n){
+    if(n === 0) return
+
+    console.log(n)
+    print(n-1)
+}
+
+print (4)
+
+function factorial(n) {
+    if (n === 1) return 1;   // base condition
+
+    return n * factorial(n - 1);
+}
+
+console.log(factorial(5));
+
+// fibonacci 
+
+function fib(n){
+    if (n<=1) return n;
+    return fib(n-1)+fib(n-2)
+}
+
+console.log(fib(4))
+
+
+// console.log(a)
+
+var a=400
+console.log(a)
+var a=30
+console.log(a)
+a=60
+console.log(a)
+
+
+// console.log(b)
+
+let b=300
+// console.log(b)
+
+b=45
+console.log(b)
+
+// console.log(c)
+
+const c=80
+console.log(c)
+
+
+hello();
+
+function hello() {
+    console.log("Hello");
+}
+// ---------- hello 
+
+// Function Expression with var 
+hello();
+
+var hello = function() {
+    console.log("Hello");
+};
+// --------hello 
+
+// Function Expression with let
+hell();
+
+let hell = function() {
+    console.log("Hello");
+}
+// ----------reference error 
+
+// with cost 
+hel()
+
+const hel = function() {
+    console.log("Hello");
+}
+// ---------ReferenceError 
+
+
+
+ </script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let original={
+            name:"anji",
+            age:22,
+            department:{role:"officer", sal:1000}
+        }
+
+        let copy=JSON.parse(JSON.stringify(original))
+
+        copy.name="vijay"
+copy.department.sal=30000
+     
+        console.log(copy)
+        console.log(original)
+
+        let orig={
+            mobile:"itel",
+            price:2500,
+        }
+copi=structuredClone(orig)
+
+copi.price=3500
+
+orig.mobile="lava"
+
+console.log(orig)
+console.log(copi)
+
+let array=[1,2,3,4,5,[6,7]]
+var cop=[...array]
+// cop[5]=6
+// cop[5][1]=9
+cop[5][2]=8
+
+console.log(array)
+console.log(cop)
+
+
+let arr=[10,20,30,40]
+let c=JSON.parse(JSON.stringify(arr))
+
+c[4]=50
+
+console.log(arr)
+console.log(c)
+
+console.log(Math.round(4.6))
+console.log(Math.round(4.4))
+
+console.log(Math.floor(4.6))
+console.log(Math.ceil(6.4))
+
+console.log(Math.trunc(9.6))
+
+console.log(Math.max(4,6,9,10))
+
+console.log(Math.min(2,45,1))
+
+console.log(Math.sqrt(4))
+
+console.log(Math.pow(2,4))
+
+console.log(Math.abs(-4.6))
+
+
+ let num=Math.floor(Math.random()*5)+1
+ console.log(num)
+
+ let otp= Math.floor(1000+Math.random()*9000)
+ console.log(otp)
+
+ let a=[100,200,500]
+
+ console.log(Math.max(...a))
+
+
+ let dice= Math.floor(Math.random()*6)+1;
+ console.log(dice)
+
+
+
+
+
+    </script>
+</body>
+</html>

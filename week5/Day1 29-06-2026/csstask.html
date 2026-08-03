@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./task.css">
+    <style>
+        /* internal CSS  */
+        h2{
+            color:blue;
+            text-align: center;
+        }
+        h5, p{
+color:blue;
+        }
+      /* background image  */
+        body{
+            background-image: url("./image.html.webp");
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+        }
+/* descendant selector  */
+        div p {
+  color: red;
+}
+/* child selector  */
+div > p {
+  color: blue;
+}
+/* adjacebt sibling selector  */
+h1 + p {
+  color: red;
+}
+/* sibling selector  */
+h1 ~ p {
+  color: purple;
+}
+    </style>
+</head>
+<body>
+
+    <!-- Inline CSS  -->
+    <h1 style="color:red; text-align:center ">This is inline css </h1>
+
+    <h2>This is internal CSS</h2>
+
+    <p>this is body content of webpage</p>
+
+    <p id="id">it is id selector</p>
+    <p class="class">it id class selector</p>
+
+    <h5>this is h5 heading</h5>
+    <p>this is paragraph</p>
+
+        <div class="image-box">
+        Background Image Example
+    </div>
+
+    <div class="box"> image </div>
+
+    <div>
+  <p>Inside div</p>
+  <section>
+    <p>Still inside div</p>
+  </section>
+
+  <div>
+  <p>Direct child</p>
+  <section>
+    <p>Not direct child</p>
+  </section>
+
+  <h1>Title</h1>
+<p>first paragraph </p>
+<p>second paragraph </p>
+</div>
+
+</div>
+
+<h1>Title</h1>
+<p>Para 1</p>
+<p>Para 2</p>
+<div>Not </div>
+<p>Para 3 ✔</p>
+
+
+</body>
+</html>

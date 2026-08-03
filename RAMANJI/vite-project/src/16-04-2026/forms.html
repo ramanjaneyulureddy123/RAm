@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       body{
+        margin:0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+       }
+       .container{
+        background-color: antiquewhite;
+        width: 100%;
+        max-width: 300px;
+        padding: 25px 30px;
+        border-radius: 10px;
+        /* text-align: center; */
+       }
+        label{
+            font-weight: bold;
+        }
+        h2{
+            text-align: center;
+        }
+        input{
+            width: 100%;
+            padding: 10px;
+        }
+        button{
+            width: 100%;
+            padding:10px;
+        }
+        button:hover{
+            background-color: red;
+        }
+        input:focus {
+            border: 3px solid blue;
+            /* border-color: blue; */
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form >
+            <h2>contact form</h2>
+            <label>Email:</label><br>
+            <input type="email"><br><br>
+            <label>Password:</label><br>
+            <input type="email"><br><br>
+            <label>Confirm password:</label><br>
+            <input type="email"><br><br>
+            <button>submit</button>
+        </form>
+    </div>
+</body>
+</html>

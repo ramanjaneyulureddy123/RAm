@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // intiliaze array is the process of assigning values to array at the time of its creation 
+        let numbers=[1,2,3,3,5,4]
+        console.log(numbers)
+        // empty array 
+        let names=[]
+        names[0]="anji"
+        names[1]="ajay"
+        names[2]="prashanth"
+        console.log(names)
+        // multi dimensional array
+        let marks=[
+            ["ramu",60],
+    ["vijjulu",78],
+    ["venkat",98]
+        ]
+        console.log(marks[0][1])
+        console.log(marks[1][0])
+        console.log(marks[2])
+
+        // push adding end of the element
+        let moives=["a","b","c"]
+        moives.push("d")
+        console.log(moives)
+
+        // pop  removing the elemnet at the end
+
+        let animals=[1,2,3,4]
+        animals.pop()
+        console.log(animals)
+
+        // splice  we can add any location
+        // adding 
+    let headings=["h1","h3",'h4']
+
+    headings.splice(1,0,"h2")
+    console.log(headings)
+
+    // removing
+        let heading=["h1","h3",'h4']
+heading.splice(0,1)
+console.log(heading)
+
+// replace 
+let nam=["anji","guna",'bhasha']
+nam.splice(1,1,"abhu")
+console.log(nam)
+
+// shift remove starting element
+
+let b=[0,1,2,3,4]
+b.shift()
+console.log(b)
+
+// unshift adding at the beginning
+let a=[10,20,30]
+a.unshift(0)
+console.log(a)
+
+var books=["lepakshi","srihari","nature"]
+console.log(books[0])
+console.log(books[1])
+console.log(books[2])
+
+books[3]="beautiful"
+console.log(books[3])
+console.log(books)
+
+// length 
+let x=[1,2,3,4,5]
+console.log(x.length)
+// element positions 
+console.log(x.indexOf(5))
+
+// includes 
+
+var array =["hello",1,true, -1, null, undefined]
+
+console.log(array.includes(1))
+console.log(array.includes(0))
+
+let cities = ["Hyderabad", "Bangalore", "Chennai"]
+console.log(cities.includes("Hyderabad")?"found":"not found")
+
+let brands = ["Samsung","Apple","OnePlus"];
+
+if(brands.includes("Apple")) {
+    console.log("Brand Available");
+}else{
+    console.log("Brand Not Available");
+}
+
+// indexOf 
+
+let num=[100,2,3,5,6]
+console.log(num.indexOf(100))
+
+let courses=["html", "js", "css"]
+console.log(courses.indexOf("css"))
+
+// lastindexof
+let value=[10,40,20,30,20,40,40,60,80]
+console.log(value.lastIndexOf(40)) 
+console.log(value.lastIndexOf(20)) 
+
+// emptying array 
+
+let a1=[100,200,300]
+a1.length=0
+console.log(a1)
+
+let word=["hi","hello","how r u"]
+word.splice(0,word.length)
+console.log(word)
+
+let fruits = ["Apple", "Mango", "Banana"];
+
+fruits = []
+console.log(fruits)
+
+// concat 
+let arr1 = [1, 2, 3]
+let arr2 = [4, 5, 6]
+
+let output =arr1.concat(arr2)
+console.log(output)
+
+let arr3 = [11,12, 13]
+let arr4 = [14, 15, 16]
+
+var result =[...arr3,...arr4]
+console.log(result)
+//  multiple array 
+
+let x1= [1, 2]
+let y = [3, 4]
+let z = [5, 6]
+
+let show =x1.concat(y,z)
+console.log(show)
+
+let view=[...x1,...y,...z]
+console.log(view)
+
+// for of 
+let students = ["john","suri","prakash"];
+
+for (let student of students) {
+    console.log(student);
+}
+
+let name ="Kumar";
+
+for (let letter of name) {
+    console.log(letter);
+}
+
+// for each 
+let student =["anji","ram","naga"]
+student.forEach(function(students){
+    console.log(students)
+})
+
+student.forEach(function(students,index){
+    console.log(index, students)
+})
+
+let numm=[1,8,7,9,0]
+numm.forEach(function(num){
+    console.log(num*2)
+})
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let name="mike"
+
+        function scop(){
+            console.log(name)
+        }
+        scop()
+        console.log(name)
+
+        let company = "coal india limited"
+        function show1(){
+            console.log(company)
+        }
+        function show2(){
+            console.log(company)
+        }
+
+        show1()
+        show2()
+        console.log(company)
+
+        //  update global variable 
+        let count =1
+        function increment(){
+            count++;
+            console.log(count)
+        }
+        increment()
+// calculate 
+        let price = 100
+let quantity = 5
+
+function calculateTotal() {
+    console.log(price*quantity);
+}
+
+calculateTotal()
+
+// function scope 
+ function my(){
+    let age =32
+    console.log(age)
+ }
+
+ my()
+// console.log(age)
+
+function add(){
+    let a=2
+    let b=3
+    console.log(a+b)
+
+}
+add()
+    // console.log(a+b)
+
+    // block scope 
+
+    if(true){
+        let c=30
+        const d=8
+        console.log(c+d)
+    }
+// console.log(c+d)
+
+{
+    let age = 25
+    console.log(age)
+}
+    // console.log(age)
+
+    {
+        const sal=200
+        console.log(sal)
+    }
+
+{
+    var nam="anji"
+    console.log(nam)
+}
+
+// factorial (recursive)
+function fact(n){
+    if(n === 0){
+        return 1
+    }
+    return n * fact(n-1)
+}
+
+console.log(fact(5 ))
+
+// iterative 
+
+function factorial(n){
+    let result=1
+    for (let i=1; i<=n;i++){
+        result *=i
+    }
+    return result
+}
+console.log(factorial(5))
+
+function sum(n){
+    if (n === 0){
+    return 0
+    }
+    return n + sum(n-1)
+}
+
+console.log(sum(5))
+
+function sums(n){
+    let total =0
+    for (let i=1; i<=n; i++ ){
+        total += i
+    }
+    return total
+}
+
+console.log(sums(10))
+
+
+function names(a,b,...c){
+    console.log(c)
+    
+}
+
+console.log(names(1,2,3,4,5,6,7,8))
+
+    </script>
+
+    
+</body>
+</html>

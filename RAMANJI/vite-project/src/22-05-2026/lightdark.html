@@ -1,0 +1,171 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            transition:0.3s;
+        }
+        .light{
+            background-color:white;
+            color:black;
+        }
+        .dark{
+            background-color: black;
+            color:white;
+        }
+        .container{
+            text-align:center;
+            cursor:pointer;
+        }
+        button{
+            padding:10px 20px;
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body class="light">
+    <div class="container">
+        <h1>Dark mode</h1>
+        <button onClick="toggle()">toggle mode</button>
+    </div>
+    <script>
+        function toggle(){
+            document.body.classList.toggle("dark")
+        }
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .header{
+            display:flex;
+            justify-content:space-between;
+             align-items:center;
+    padding:15px 20px;
+    background-color:aliceblue;
+        }
+        .left{
+            display:flex;
+            gap:15px;
+            align-items:center;
+        }
+        .center input{
+            width:300px;
+            padding:8px;
+            border-radius:20px;
+        }
+        .right{
+    display:flex;
+    gap:15px;
+    align-items:center;
+}
+.profile{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    background-color: gray;
+}
+a{
+    color:black;
+    text-decoration: none;
+}
+.left h2{
+    color:red;
+
+}
+.whole{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background-color:#f2f2f2;
+}
+
+.card{
+    width:350px;
+    padding:30px;
+    text-align:center;
+    background-color:white;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+h1{
+    color:blue;
+}
+
+input{
+    width:100%;
+    padding:10px;
+    margin-top:15px;
+    box-sizing:border-box;
+}
+
+button{
+  margin-top: 20px;
+    padding:10px 20px;
+    background-color:blue;
+    color:white;
+    border:none;
+    border-radius:5px;
+}
+button:hover{
+    background-color: aqua;
+}
+
+@media(max-width:768px){
+
+    button{
+        width:100%;
+    }
+    .header{
+        display:grid;
+        grid-template-columns:1fr;
+
+justify-items:center;
+        
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="header">
+<div class="left">
+    <h2>Youtube</h2>
+    <a href="#">home</a>
+    <a href="#">contact</a>
+    <a href="#">services</a>
+</div>
+<div class="center">
+    <input type="text" placeholder="Search">
+</div>
+<div class="right">
+<div class="profile"></div>
+</div>
+    </div>
+    <div class="whole">
+    <div class="card">
+
+<h1>Google</h1>
+
+<h2>Sign In</h2>
+
+<input type="email" placeholder="Email">
+
+<input type="password" placeholder="Password">
+
+<button>Next</button>
+
+</div>
+</div>
+</body>
+</html>

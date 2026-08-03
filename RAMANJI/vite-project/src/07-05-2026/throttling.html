@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{height:2000px}
+    </style>
+</head>
+<body>
+    <script>
+        function throttle(fn,delay){
+            let lastcall=0
+            return function(...args){
+                let now=Date.now()
+if(now-lastcall >= delay){
+   fn()
+   lastcall=now;
+}
+            }
+        }
+
+        function scroll(){
+            console.log("scrolled you have set a timeout of 1 sec")
+
+        }
+
+        const tscroll=throttle(scroll,1000)
+        window.addEventListener("scroll",tscroll)
+//         window.addEventListener("scroll", () => {
+//   console.log("scrolling");
+// });
+
+
+        </script>
+</body>
+</html>
+
